@@ -79,11 +79,11 @@ footer b{color:#fff}
 <ul>
 <li><b>现状：</b>产线视觉已量产嵌入式化，智能相机脱机跑检测、读码、定位，直接给 PLC 输出 OK/NG；DIC 试验力学线至今仍是“相机＋工控机／笔记本＋商用 DIC 软件”套装，没有一家把全套 DIC 做到嵌入式盒子里量产。这是机会窗口，也是风险。</li>
 <li><b>嵌入边界：</b>采集、预处理、存储传输、显示交互四层可以全嵌；轻量 DIC 只能部分嵌；全场高精度三维 DIC 难嵌，留工作站／服务器，或边缘只采＋粗算、精算回传。推荐路线是“边缘采集＋分级计算”。</li>
-<li><b>成本结构：</b>DIC 的成本大头在软件不在硬件。以公开采购报价单为例，一套 DIC 系统整套成交 <span class="num">¥41.7万（$62,450）</span>，其中软件 <span class="num">¥32.2万（$48,275）</span>，占成交价 <span class="num">77%</span>；六项硬件合计 <span class="num">¥12.8万（$19,170）</span>，见第 05 节报价拆分。</li>
+<li><b>成本结构：</b>DIC 的成本大头在软件不在硬件。以公开采购报价单为例，一套 DIC 系统整套成交 <span class="num">¥416,542</span>，其中软件 <span class="num">¥321,994</span>，占成交价 <span class="num">77%</span>；六项硬件合计 <span class="num">¥127,864</span>，见第 05 节报价拆分。</li>
 <li><b>选型原则：</b>先算接口带宽与同步精度，再选平台；按相机路数、帧率、是否跑全场 DIC 分档，不按纸面 TOPS 选型。</li>
 </ul>
 <p><b>证据等级：</b>A 已核实——两个以上独立来源一致，或政府采购公示、标准文本等一手文件；B 单来源——只有一个来源，未独立核实；C 厂商自述——厂商官网或产品页口径，未经第三方复核，不进入结论；D 未核实——无公开实证，不进入结论。全文按此标注。</p>
-<div class="note">汇率口径：本页美元金额按 2026-11-25 汇率 1 美元 ≈ 6.67 元人民币折算，仅供参考；实际成交价以采购时汇率为准。</div>
+<div class="note">金额口径：本页金额均为人民币；美元原价按 2026-11-25 汇率 1 美元 ≈ 6.67 元人民币折算，不再列美元原文，仅供参考；实际成交价以采购时汇率为准。</div>
 </section>
 
 <section id="s2">
@@ -123,15 +123,15 @@ footer b{color:#fff}
 <h3>3.2 平台对比</h3>
 <table>
 <tr><th>平台</th><th>算力／接口</th><th>价格带</th><th>适用边界</th><th>证据</th></tr>
-<tr><td>树莓派 Pi5／CM5</td><td>无 NPU；2 路 MIPI CSI-2；GbE（PTP）；满载约 <span class="num">12 W</span></td><td class="num">¥400–634（$60–95）</td><td>单相机低帧率 ≤5MP@20fps，只采＋存＋预览；多相机高速、DIC 全场不适合</td><td><span class="ev ev-a">A</span></td></tr>
-<tr><td>Jetson Orin Nano／NX／AGX</td><td><span class="num">34–275 TOPS</span>（稀疏 INT8）；Nano／NX 最多 4 路 MIPI，AGX 最多 6 路</td><td>Nano Super 套件 <span class="num">¥2,661（$399）</span>；NX 16GB 模块 <span class="num">¥6,663（$999）</span>；AGX 套件 <span class="num">¥2.3万（$3,499）</span>（2026-07 涨价后官方价）</td><td>单／双相机中速＋AI 推理是甜点；NX 16GB 可 2–4 路 5MP</td><td><span class="ev ev-a">A</span></td></tr>
-<tr><td>FPGA Kria K26</td><td><span class="num">256K</span> 逻辑单元；DPU 仅 <span class="num">1.4 TOPS</span>；典型 <span class="num">7.5 W</span></td><td>KV260 套件 <span class="num">¥1,661（$249）</span>官网指导价；渠道价 <span class="num">¥1,893（$283.86）</span>，两处口径不一，并列</td><td>原生 MIPI／CXP／Camera Link 直采、μs 级确定性、硬件流水线预处理最强；AI 算力弱，开发门槛最高</td><td><span class="ev ev-b">B</span></td></tr>
-<tr><td>Mini PC／工控机 x86</td><td>12 代 i7／Core Ultra；可 4×2.5GigE PoE＋；PCIe 可插采集卡／独显</td><td>无风扇 IPC 渠道约 <span class="num">¥2,194–7,004（$329–1,050）</span></td><td>多相机高速、全场 DIC 计算、商业 DIC 软件直跑的唯一稳妥选择，是性能锚点</td><td><span class="ev ev-b">B</span></td></tr>
-<tr><td>RK3588／RK3576</td><td>NPU <span class="num">6 TOPS</span>；<span class="num">48MP</span> ISP；多路 MIPI</td><td>板卡 <span class="num">¥467–2,001（$70–300）</span>；Radxa ROCK 4D <span class="num">¥734（$109.99）</span></td><td>性价比最高的国产多路 MIPI 方案；生态弱，BSP 依赖厂商，GenICam SDK 的 ARM 支持待确认</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>树莓派 Pi5／CM5</td><td>无 NPU；2 路 MIPI CSI-2；GbE（PTP）；满载约 <span class="num">12 W</span></td><td class="num">¥400–634</td><td>单相机低帧率 ≤5MP@20fps，只采＋存＋预览；多相机高速、DIC 全场不适合</td><td><span class="ev ev-a">A</span></td></tr>
+<tr><td>Jetson Orin Nano／NX／AGX</td><td><span class="num">34–275 TOPS</span>（稀疏 INT8）；Nano／NX 最多 4 路 MIPI，AGX 最多 6 路</td><td>Nano Super 套件 <span class="num">¥2,661</span>；NX 16GB 模块 <span class="num">¥6,663</span>；AGX 套件 <span class="num">¥23,338</span>（2026-07 涨价后官方价）</td><td>单／双相机中速＋AI 推理是甜点；NX 16GB 可 2–4 路 5MP</td><td><span class="ev ev-a">A</span></td></tr>
+<tr><td>FPGA Kria K26</td><td><span class="num">256K</span> 逻辑单元；DPU 仅 <span class="num">1.4 TOPS</span>；典型 <span class="num">7.5 W</span></td><td>KV260 套件 <span class="num">¥1,661</span>官网指导价；渠道价 <span class="num">¥1,893</span>，两处口径不一，并列</td><td>原生 MIPI／CXP／Camera Link 直采、μs 级确定性、硬件流水线预处理最强；AI 算力弱，开发门槛最高</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>Mini PC／工控机 x86</td><td>12 代 i7／Core Ultra；可 4×2.5GigE PoE＋；PCIe 可插采集卡／独显</td><td>无风扇 IPC 渠道约 <span class="num">¥2,194–7,004</span></td><td>多相机高速、全场 DIC 计算、商业 DIC 软件直跑的唯一稳妥选择，是性能锚点</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>RK3588／RK3576</td><td>NPU <span class="num">6 TOPS</span>；<span class="num">48MP</span> ISP；多路 MIPI</td><td>板卡 <span class="num">¥467–2,001</span>；Radxa ROCK 4D <span class="num">¥734</span></td><td>性价比最高的国产多路 MIPI 方案；生态弱，BSP 依赖厂商，GenICam SDK 的 ARM 支持待确认</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>Qualcomm QCS8550</td><td><span class="num">48 TOPS</span>（Dense INT8）；6 路 MIPI CSI；典型 <span class="num">2.5 W</span></td><td>板卡询价制</td><td>多路 MIPI 低成本备选；生态弱于 Jetson；实例：FLIR AVP 相机</td><td><span class="ev ev-c">C</span></td></tr>
-<tr><td>Hailo-8 M.2（加 AI 用）</td><td>Hailo-8 <span class="num">26 TOPS／2.5 W</span>；Hailo-8L <span class="num">13 TOPS</span></td><td>Hailo-8L 约 <span class="num">¥467（约 $70）</span> 起（注意：该价为 8L 型号，不可与 Hailo-8 混用）</td><td>给已有主机加 AI 最便宜；只做推理，不做采集</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>Hailo-8 M.2（加 AI 用）</td><td>Hailo-8 <span class="num">26 TOPS／2.5 W</span>；Hailo-8L <span class="num">13 TOPS</span></td><td>Hailo-8L 约 <span class="num">¥467（约 ¥467）</span> 起（注意：该价为 8L 型号，不可与 Hailo-8 混用）</td><td>给已有主机加 AI 最便宜；只做推理，不做采集</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>采集卡＋工控机</td><td>Euresys CXP-12 四路 <span class="num">5000 MB/s</span>；10GigE＋RDMA 可跑满 <span class="num">10 Gbps</span> 不丢包</td><td>按通道与路数询价</td><td>线扫不断行＋编码器同步＋大于 <span class="num">1 GB/s</span> 三项占其二时，树莓派／Mini PC 物理上不够，必须走这条</td><td><span class="ev ev-c">C</span></td></tr>
-<tr><td>智能相机</td><td>板载 SoC＋算法，单相机单工位</td><td><span class="num">¥1.3万–10.0万（$2,000–15,000）</span></td><td>能嵌的是判断逻辑（有无／分类／OK-NG），跑不了 DIC 全场、大面阵高速、多相机融合</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>智能相机</td><td>板载 SoC＋算法，单相机单工位</td><td><span class="num">¥1.3万–10.0万</span></td><td>能嵌的是判断逻辑（有无／分类／OK-NG），跑不了 DIC 全场、大面阵高速、多相机融合</td><td><span class="ev ev-b">B</span></td></tr>
 </table>
 <p><b>实测边界：</b>Pi5 接 5MP GigE 相机约 <span class="num">20.4 fps／97.5 MB/s</span>；简单阈值尚可，自适应阈值处理 5MP 会丢包。结论：树莓派只适合“采＋存＋预览”，不要指望它跑全场 DIC。来源：第三方实测<span class="ev ev-b">B</span>。</p>
 <h3>3.3 排序（按工业相机采集任务，不按纸面 TOPS）</h3>
@@ -171,11 +171,11 @@ footer b{color:#fff}
 <h2><span class="no">05</span>市场与竞品</h2>
 <h3>5.1 市场现状</h3>
 <p>产线视觉线已量产成熟；DIC 线至今仍是套装形态，没有一家把全套 DIC 做到嵌入式盒子里量产。机会窗口与风险并存：实时亚像素相关算力、标定精度、双相机同步三道关没人搬走。</p>
-<p>工业机器视觉市场规模预测（2025 年约 <span class="num">¥932亿–987亿（$13.98B–14.8B）</span>，2034 年预计 <span class="num">¥2,308亿–2,649亿（$34.6B–39.72B）</span>，CAGR <span class="num">9.9–12.3%</span>）<span class="ev ev-d">D</span>——不同机构口径差异大，仅作背景参考，不进入结论。</p>
+<p>机器视觉市场规模预测（Grand View Research单源：2025 年 <span class="num">¥1,507亿</span>，2026 年 <span class="num">¥1,688亿</span>，2033 年预计 <span class="num">¥4,069亿</span>，CAGR <span class="num">13.4%（2026–2033）</span>）<span class="ev ev-b">B</span>——单来源，仅作背景参考，不进入结论。</p>
 <h3>5.2 DIC 商用系统横向对比</h3>
 <table>
 <tr><th>厂商／产品</th><th>方案形态</th><th>做到什么程度</th><th>价格／备注</th><th>证据</th></tr>
-<tr><td>Correlated Solutions VIC-3D</td><td>软件＋相机套装，Windows PC＋USB 加密狗</td><td>行业参考基准；零嵌入式化</td><td>整套 <span class="num">¥41.7万（$62,450）</span>，软件 <span class="num">¥32.2万（$48,275）</span> 占成交价 <span class="num">77%</span>（见下表）</td><td><span class="ev ev-a">A</span></td></tr>
+<tr><td>Correlated Solutions VIC-3D</td><td>软件＋相机套装，Windows PC＋USB 加密狗</td><td>行业参考基准；零嵌入式化</td><td>整套 <span class="num">¥416,542</span>，软件 <span class="num">¥321,994</span> 占成交价 <span class="num">77%</span>（见下表）</td><td><span class="ev ev-a">A</span></td></tr>
 <tr><td>ZEISS／GOM ARAMIS</td><td>双 12MP CMOS＋Dell 工作站＋Correlate 软件</td><td>高端全场测量；零嵌入式化</td><td>询价制</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>Dantec Istra4D Q-400／Q-480</td><td>软件＋相机套装</td><td>Q-480 手持式最接近一体化，但仍需外接 PC</td><td>询价制</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>LaVision StrainMaster／DaVis</td><td>软件＋相机套装</td><td>PIV／DIC 双线；零嵌入式化</td><td>询价制</td><td><span class="ev ev-b">B</span></td></tr>
@@ -189,25 +189,25 @@ footer b{color:#fff}
 <h3>VIC-3D 报价拆分（俄亥俄州政府采购报价单，2025-10）</h3>
 <table>
 <tr><th>项目</th><th>金额</th><th>依据</th></tr>
-<tr><td>VIC-3D 软件</td><td class="num">¥32.2万（$48,275）</td><td>报价单原价；占标价 64%、占成交价 77%</td></tr>
-<tr><td>2 台 5MP 相机（各 ¥8,104（$1,215））</td><td class="num">¥16,208（$2,430）</td><td>报价单原价</td></tr>
-<tr><td>工控机</td><td class="num">¥32,216（$4,830）</td><td>报价单原价</td></tr>
-<tr><td>标定装置</td><td class="num">¥34,917（$5,235）</td><td>报价单原价</td></tr>
-<tr><td>DAQ</td><td class="num">¥15,775（$2,365）</td><td>报价单原价</td></tr>
-<tr><td>灯光</td><td class="num">¥7,437（$1,115）</td><td>报价单原价</td></tr>
-<tr><td>安装架</td><td class="num">¥21,311（$3,195）</td><td>报价单原价</td></tr>
-<tr class="sumrow"><td>已列分项合计</td><td class="num">¥449,858（$67,445）</td><td>上列七项相加，闭合</td></tr>
-<tr><td>标价合计与分项合计的差额</td><td class="num">¥53,560（$8,030）</td><td>报价单未逐项列明（培训、维护、运费等），不拆分</td></tr>
-<tr><td>标价合计</td><td class="num">¥503,418（$75,475）</td><td>报价单原价</td></tr>
-<tr><td>折扣</td><td class="num">−¥86,877（−$13,025）</td><td>报价单原价</td></tr>
-<tr class="sumrow"><td>成交总价</td><td class="num">¥416,542（$62,450）≈ ¥41.7万</td><td>标价减折扣；分项按 6.67 折算取整，合计存在 ±¥1 取整差</td></tr>
+<tr><td>VIC-3D 软件</td><td class="num">¥321,994</td><td>报价单原价；占标价 64%、占成交价 77%</td></tr>
+<tr><td>2 台 5MP 相机（各 ¥8,104）</td><td class="num">¥16,208</td><td>报价单原价</td></tr>
+<tr><td>工控机</td><td class="num">¥32,216</td><td>报价单原价</td></tr>
+<tr><td>标定装置</td><td class="num">¥34,917</td><td>报价单原价</td></tr>
+<tr><td>DAQ</td><td class="num">¥15,775</td><td>报价单原价</td></tr>
+<tr><td>灯光</td><td class="num">¥7,437</td><td>报价单原价</td></tr>
+<tr><td>安装架</td><td class="num">¥21,311</td><td>报价单原价</td></tr>
+<tr class="sumrow"><td>已列分项合计</td><td class="num">¥449,858</td><td>上列七项相加，闭合</td></tr>
+<tr><td>标价合计与分项合计的差额</td><td class="num">¥53,560</td><td>报价单未逐项列明（培训、维护、运费等），不拆分</td></tr>
+<tr><td>标价合计</td><td class="num">¥503,418</td><td>报价单原价</td></tr>
+<tr><td>折扣</td><td class="num">−¥86,877</td><td>报价单原价</td></tr>
+<tr class="sumrow"><td>成交总价</td><td class="num">¥416,542≈ ¥41.7万</td><td>标价减折扣；分项按 6.67 折算取整，合计存在 ±¥1 取整差</td></tr>
 </table>
-<p>含 2 天培训＋1 年维护。结论：软件是最大单项，占标价 64%、占成交价 77%；六项硬件合计 <span class="num">¥12.8万（$19,170）</span>，占标价 25%。嵌入式化省掉的主要是硬件与集成成本，软件成本省不掉。来源：政府采购报价单<span class="ev ev-a">A</span>。</p>
+<p>含 2 天培训＋1 年维护。结论：软件是最大单项，占标价 64%、占成交价 77%；六项硬件合计 <span class="num">¥127,864</span>，占标价 25%。嵌入式化省掉的主要是硬件与集成成本，软件成本省不掉。来源：政府采购报价单<span class="ev ev-a">A</span>。</p>
 <h3>5.3 产线视觉侧（嵌入式化参照系）</h3>
 <table>
 <tr><th>厂商／产品</th><th>嵌入式形态</th><th>价格带／备注</th><th>证据</th></tr>
-<tr><td>康耐视 In-Sight 3800／2800／7000／9000</td><td>相机内跑定位、测量、读码、OCR、分类、分割、异常检测</td><td>入门 <span class="num">¥1.3万–4.0万（$2,000–6,000）</span>；中端 <span class="num">¥5.3万–10.0万（$8,000–15,000）</span>；高端 <span class="num">¥10.0万–33.4万+（$15,000–50,000+）</span></td><td><span class="ev ev-b">B</span></td></tr>
-<tr><td>基恩士 VS／CV-X／XG-X</td><td>视觉控制器＋相机</td><td>XG-X2900 约 <span class="num">¥9.3万（$14,000）</span></td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>康耐视 In-Sight 3800／2800／7000／9000</td><td>相机内跑定位、测量、读码、OCR、分类、分割、异常检测</td><td>入门 <span class="num">¥1.3万–4.0万</span>；中端 <span class="num">¥5.3万–10.0万</span>；高端 <span class="num">¥10.0万–33.4万+</span></td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>基恩士 VS／CV-X／XG-X</td><td>视觉控制器＋相机</td><td>XG-X2900 约 <span class="num">¥9.3万</span></td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>海康机器人 SC 系列／VC 控制器</td><td>智能相机 1.6–5MP，VM 平台含深度学习模块；SC3000 系列 1.6MP、60fps、全局快门</td><td>官方询价制，无公开标价</td><td><span class="ev ev-a">A</span></td></tr>
 <tr><td>凌云光 ST3000／Swift3000</td><td>智能面阵相机 1.3–5MP，内置传统算法＋深度学习，PROFINET／Modbus／FTP</td><td>官方询价制，无公开标价</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>IDS NXT malibu／oslo</td><td>Ambarella SoC＋NPU，片上跑神经网络，IP69K</td><td>最接近嵌入式采集盒理念的形态之一（本页判断）</td><td><span class="ev ev-b">B</span></td></tr>
@@ -219,7 +219,7 @@ footer b{color:#fff}
 <table>
 <tr><th>厂商</th><th>代表系列与形态</th><th>做到什么程度</th><th>证据</th></tr>
 <tr><td>Basler（德国）</td><td>ace2（GigE／5G／10G／CXP／USB3／GMSL2）、boost（CXP）</td><td>ace2 最高 25MP；boost CXP 45MP／150fps；ace2 分销商价 €609–2,799（欧元，未折算人民币）；pylon SDK 基于 GenICam，支持 Linux x86 与 Linux ARM</td><td><span class="ev ev-b">B</span></td></tr>
-<tr><td>FLIR／Teledyne（美国）</td><td>Blackfly S（USB3／GigE）、Oryx（10GigE）、Firefly DL、DALSA Genie Nano、Teledyne BOA2</td><td>Blackfly S USB3 1.3MP <span class="num">¥4,434（$664.80）</span>、板级 5MP <span class="num">¥8,804（$1,320）</span>、GigE 12MP <span class="num">¥20,210（$3,030）</span>；Oryx 10GigE 7.1MP <span class="num">¥28,990（$4,346.35）</span>；Firefly DL 相机内跑分类，1.6MP 60fps 2W；Genie Nano 渠道约 <span class="num">¥2,415–2,435（$362–365）</span>；BOA2 双核＋iNspect，最高 5MP</td><td><span class="ev ev-b">B</span></td></tr>
+<tr><td>FLIR／Teledyne（美国）</td><td>Blackfly S（USB3／GigE）、Oryx（10GigE）、Firefly DL、DALSA Genie Nano、Teledyne BOA2</td><td>Blackfly S USB3 1.3MP <span class="num">¥4,434</span>、板级 5MP <span class="num">¥8,804</span>、GigE 12MP <span class="num">¥20,210</span>；Oryx 10GigE 7.1MP <span class="num">¥28,990</span>；Firefly DL 相机内跑分类，1.6MP 60fps 2W；Genie Nano 渠道约 <span class="num">¥2,415–2,435</span>；BOA2 双核＋iNspect，最高 5MP</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>Allied Vision（德国）</td><td>Alvium（GigE／5GigE／USB3／MIPI CSI-2／GMSL2）</td><td>最高 24.6MP；同一传感器架构覆盖六种接口，便于嵌入式集成；Vimba X SDK 符合 GenICam</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>IDS（德国）</td><td>NXT（malibu／oslo）、uEye 系列</td><td>NXT 片上跑神经网络，IP69K；uEye 为常规工业相机线</td><td><span class="ev ev-b">B</span></td></tr>
 <tr><td>JAI（丹麦）</td><td>Go 系列面阵、Fusion 系列多光谱棱镜相机、3-CMOS RGB 棱镜相机</td><td>面阵 2.35–45MP；棱镜相机单光路同时出可见光＋NIR，色彩保真高于 Bayer；多光谱按波段定制</td><td><span class="ev ev-b">B</span></td></tr>
@@ -250,36 +250,36 @@ footer b{color:#fff}
 <tr><td>工业环境</td><td><span class="num">−20～60 ℃</span>无风扇运行，散热与防护按整机算</td><td>工程要求</td></tr>
 </table>
 <h3>6.3 硬件成本：逐项算账</h3>
-<div class="note">汇率口径：本页美元金额按 2026-11-25 汇率 1 美元 ≈ 6.67 元人民币折算，仅供参考；实际成交价以采购时汇率为准。</div>
+<div class="note">金额口径：本页金额均为人民币；美元原价按 2026-11-25 汇率 1 美元 ≈ 6.67 元人民币折算，不再列美元原文，仅供参考；实际成交价以采购时汇率为准。</div>
 <p><b>入门档：单相机采集盒（树莓派 CM5＋1 台 5MP GigE 相机）。</b>镜头、集成人工待询价，不含在合计内。</p>
 <table>
 <tr><th>分项</th><th>金额</th><th>依据</th></tr>
-<tr><td>相机 1 台 5MP GigE</td><td class="num">¥8,104（$1,215）</td><td>政府采购报价单同款相机单价<span class="ev ev-a">A</span></td></tr>
+<tr><td>相机 1 台 5MP GigE</td><td class="num">¥8,104</td><td>政府采购报价单同款相机单价<span class="ev ev-a">A</span></td></tr>
 <tr><td>镜头 1 支（C-mount）</td><td>待询价</td><td>型号按视野另选，未定价</td></tr>
 <tr><td>采集卡</td><td class="num">¥0</td><td>不需要，GigE 直连</td></tr>
-<tr><td>计算机：树莓派 CM5 8GB</td><td class="num">¥534（$80）</td><td>官方价<span class="ev ev-a">A</span></td></tr>
+<tr><td>计算机：树莓派 CM5 8GB</td><td class="num">¥534</td><td>官方价<span class="ev ev-a">A</span></td></tr>
 <tr><td>标定：简易标定板自制</td><td>未单独计价</td><td>2D 测量可用打印标定板，精度要求低时适用</td></tr>
-<tr><td>线缆／电源／结构散热</td><td class="num">¥1,334–3,335（$200–500）</td><td>推测（研究笔记 BOM 口径）</td></tr>
+<tr><td>线缆／电源／结构散热</td><td class="num">¥1,334–3,335</td><td>推测（研究笔记 BOM 口径）</td></tr>
 <tr><td>软件许可</td><td class="num">¥0</td><td>Aravis 开源 LGPL-2.1<span class="ev ev-a">A</span></td></tr>
 <tr><td>集成人工</td><td>待询价</td><td>按项目另计</td></tr>
-<tr class="sumrow"><td>合计（已核价 ¥8,638 ＋推测 ¥1,334–3,335）</td><td class="num">¥9,972–11,973（$1,495–1,795）</td><td>分项相加，闭合；镜头、集成人工不含在内</td></tr>
+<tr class="sumrow"><td>合计（已核价 ¥8,638 ＋推测 ¥1,334–3,335）</td><td class="num">¥9,972–11,973</td><td>分项相加，闭合；镜头、集成人工不含在内</td></tr>
 </table>
 <p><b>中档：双目采集＋轻量 DIC（Jetson Orin NX 16GB＋双 5MP 相机＋PTP 同步）。</b>镜头、集成人工待询价，不含在合计内。</p>
 <table>
 <tr><th>分项</th><th>金额</th><th>依据</th></tr>
-<tr><td>相机 2 台 5MP GigE</td><td class="num">¥16,208（$2,430）</td><td>政府采购报价单同款相机单价<span class="ev ev-a">A</span></td></tr>
+<tr><td>相机 2 台 5MP GigE</td><td class="num">¥16,208</td><td>政府采购报价单同款相机单价<span class="ev ev-a">A</span></td></tr>
 <tr><td>镜头 2 支（C-mount）</td><td>待询价</td><td>型号按视野另选，未定价</td></tr>
 <tr><td>采集卡</td><td class="num">¥0</td><td>不需要，GigE 直连＋PTP 同步</td></tr>
-<tr><td>计算机：Jetson Orin NX 16GB 模块</td><td class="num">¥6,663（$999）</td><td>2026-07 官方价<span class="ev ev-a">A</span></td></tr>
-<tr><td>载板／存储／电源／线缆／结构散热</td><td class="num">¥2,001–5,336（$300–800）</td><td>推测（研究笔记 BOM 口径）</td></tr>
-<tr><td>标定装置</td><td class="num">¥34,917（$5,235）</td><td>政府采购报价单标定套件价<span class="ev ev-a">A</span></td></tr>
+<tr><td>计算机：Jetson Orin NX 16GB 模块</td><td class="num">¥6,663</td><td>2026-07 官方价<span class="ev ev-a">A</span></td></tr>
+<tr><td>载板／存储／电源／线缆／结构散热</td><td class="num">¥2,001–5,336</td><td>推测（研究笔记 BOM 口径）</td></tr>
+<tr><td>标定装置</td><td class="num">¥34,917</td><td>政府采购报价单标定套件价<span class="ev ev-a">A</span></td></tr>
 <tr><td>软件许可</td><td class="num">¥0</td><td>开源起点，许可免费；自研开发成本见 6.4</td></tr>
 <tr><td>集成人工</td><td>待询价</td><td>按项目另计</td></tr>
-<tr class="sumrow"><td>合计（已核价 ¥57,788 ＋推测 ¥2,001–5,336）</td><td class="num">¥59,789–63,124（$8,965–9,465）</td><td>分项相加，闭合；镜头、集成人工不含在内</td></tr>
+<tr class="sumrow"><td>合计（已核价 ¥57,788 ＋推测 ¥2,001–5,336）</td><td class="num">¥59,789–63,124</td><td>分项相加，闭合；镜头、集成人工不含在内</td></tr>
 </table>
 <p>中档说明：标定装置 <span class="num">¥34,917</span> 占已核价部分的 60%，是报价单中的标定套件价；若用简易标定板自制，总价可大幅下降，但精度与溯源需另行验证<span class="ev ev-d">D</span>。</p>
-<p><b>高性能档：全场 DIC 工作站（x86 工控机＋商用 DIC 软件）。</b>以第 05 节 VIC-3D 报价拆分为准：已列分项合计 <span class="num">¥449,858（$67,445）</span>，标价 <span class="num">¥503,418（$75,475）</span>，折扣后成交 <span class="num">¥416,542（$62,450）≈ ¥41.7万</span>。镜头未列，待询价；本档 GigE 直连不需要采集卡，上 CXP-12／10GigE 时采集卡待询价；报价含 2 天培训＋1 年维护，现场集成人工待询价。</p>
-<p>价格带参考：单颗工业相机 <span class="num">¥2,001–46,690（$300–7,000）</span>；智能相机 <span class="num">¥1.3万–10.0万（$2,000–15,000）</span>；视觉控制器／高端系统 <span class="num">¥9.3万–33.4万（$14,000–50,000）</span>；整线集成费常超硬件本身（<span class="num">¥13.3万–100.1万（$20,000–150,000）</span>）。依据：厂商与分销商口径<span class="ev ev-b">B</span>。</p>
+<p><b>高性能档：全场 DIC 工作站（x86 工控机＋商用 DIC 软件）。</b>以第 05 节 VIC-3D 报价拆分为准：已列分项合计 <span class="num">¥449,858</span>，标价 <span class="num">¥503,418</span>，折扣后成交 <span class="num">¥416,542≈ ¥41.7万</span>。镜头未列，待询价；本档 GigE 直连不需要采集卡，上 CXP-12／10GigE 时采集卡待询价；报价含 2 天培训＋1 年维护，现场集成人工待询价。</p>
+<p>价格带参考：单颗工业相机 <span class="num">¥2,001–46,690</span>；智能相机 <span class="num">¥1.3万–10.0万</span>；视觉控制器／高端系统 <span class="num">¥9.3万–33.4万</span>；整线集成费常超硬件本身（<span class="num">¥13.3万–100.1万</span>）。依据：厂商与分销商口径<span class="ev ev-b">B</span>。</p>
 <h3>6.4 开发成本与周期：九阶段拆分</h3>
 <p>以下为工作量估计，不是报价。人力单价未核实，不代入，不给开发总价。各阶段部分并行，总周期不等于各阶段相加。</p>
 <table>
@@ -292,7 +292,7 @@ footer b{color:#fff}
 <tr><td>6 标定同步闭环</td><td>标定流程、双相机同步、应变闭环控制</td><td class="num">3–6 人月</td><td>研究笔记（与报告 UI 合计 6–12 人月，此处为拆分，推测）</td></tr>
 <tr><td>7 报告与 UI</td><td>报告生成、FEA 对标接口、操作界面</td><td class="num">3–6 人月</td><td>研究笔记（与标定同步闭环合计 6–12 人月，此处为拆分，推测）</td></tr>
 <tr><td>8 稳定性与溯源</td><td>长时间运行、振动／温漂、测量溯源、回归测试</td><td>人月未核实；周期含在可售产品 18–30 个月内</td><td><span class="ev ev-d">D</span></td></tr>
-<tr><td>9 FCC／CE 认证</td><td>FCC Part 15B、CE、IEC 61326-1</td><td class="num">¥6.7万–16.7万（$10,000–25,000）；周期 2–4 个月</td><td>研究笔记；推测；其中 FCC Part 15B <span class="num">¥1.0万–2.3万（$1,500–3,500）</span>、CE <span class="num">¥2.0万–4.0万（$3,000–6,000）</span></td></tr>
+<tr><td>9 FCC／CE 认证</td><td>FCC Part 15B、CE、IEC 61326-1</td><td class="num">¥6.7万–16.7万；周期 2–4 个月</td><td>研究笔记；推测；其中 FCC Part 15B <span class="num">¥1.0万–2.3万</span>、CE <span class="num">¥2.0万–4.0万</span></td></tr>
 </table>
 <p>整机周期：原型 3–6 个月；可售产品 18–30 个月。研究笔记口径，推测，非承诺。第 5 阶段 18–36 个月与整机可售 18–30 个月为不同口径的估计，并行推进，不叠加。</p>
 </section>
@@ -338,9 +338,9 @@ footer b{color:#fff}
 <p>以下建议按场景给条件，不推单一厂商。先定场景，再定平台。</p>
 <table>
 <tr><th>场景</th><th>推荐</th><th>为什么</th><th>不选什么</th><th>边界条件</th></tr>
-<tr><td>单相机低帧率采集（≤5MP@20fps，只采＋存＋预览）</td><td>树莓派 CM5 或 RK3588＋GigE 相机，入门档，合计 <span class="num">¥9,972–11,973（$1,495–1,795）</span></td><td>实测 5MP GigE 约 20.4 fps，够用；成本最低；开源驱动可直接嵌</td><td>Jetson AGX（性能过剩）、FPGA（开发门槛与成本不匹配）</td><td>镜头、集成人工待询价；不跑 DIC 全场</td></tr>
-<tr><td>双相机＋轻量 2D-DIC</td><td>Jetson Orin NX 16GB＋双 5MP 相机＋PTP 同步，中档，合计 <span class="num">¥59,789–63,124（$8,965–9,465）</span></td><td>NX 16GB 可 2–4 路 5MP，中速＋AI 推理是甜点；PTP 同步达 μs 级</td><td>树莓派（算力不够）、x86 工作站（体积与功耗不匹配）</td><td>标定装置占已核价 60%；全场高精度 3D-DIC 实时做不到</td></tr>
-<tr><td>全场高精度 3D-DIC</td><td>x86 工作站＋采集卡＋商用 DIC 软件，高性能档，成交 <span class="num">¥41.7万（$62,450）</span></td><td>多相机高速、全场 3D-DIC、应变闭环控制只有这条路有公开实证</td><td>任何单板机跑全场实时（无公开实测基准）；自研 3D 算法直接当产品卖（精度对标需 18–36 个月）</td><td>嵌入式盒子形态目前没有公开实证；软件占成交价 77%，省不掉</td></tr>
+<tr><td>单相机低帧率采集（≤5MP@20fps，只采＋存＋预览）</td><td>树莓派 CM5 或 RK3588＋GigE 相机，入门档，合计 <span class="num">¥9,972–11,973</span></td><td>实测 5MP GigE 约 20.4 fps，够用；成本最低；开源驱动可直接嵌</td><td>Jetson AGX（性能过剩）、FPGA（开发门槛与成本不匹配）</td><td>镜头、集成人工待询价；不跑 DIC 全场</td></tr>
+<tr><td>双相机＋轻量 2D-DIC</td><td>Jetson Orin NX 16GB＋双 5MP 相机＋PTP 同步，中档，合计 <span class="num">¥59,789–63,124</span></td><td>NX 16GB 可 2–4 路 5MP，中速＋AI 推理是甜点；PTP 同步达 μs 级</td><td>树莓派（算力不够）、x86 工作站（体积与功耗不匹配）</td><td>标定装置占已核价 60%；全场高精度 3D-DIC 实时做不到</td></tr>
+<tr><td>全场高精度 3D-DIC</td><td>x86 工作站＋采集卡＋商用 DIC 软件，高性能档，成交 <span class="num">¥41.7万</span></td><td>多相机高速、全场 3D-DIC、应变闭环控制只有这条路有公开实证</td><td>任何单板机跑全场实时（无公开实测基准）；自研 3D 算法直接当产品卖（精度对标需 18–36 个月）</td><td>嵌入式盒子形态目前没有公开实证；软件占成交价 77%，省不掉</td></tr>
 <tr><td>产线视觉（节拍、PLC 对接、OK／NG）</td><td>智能相机（康耐视／海康机器人／凌云光／IDS／LMI 按工位选）</td><td>相机内跑判断逻辑、直连 PLC，是已量产的形态；节拍与对接都有现成方案</td><td>DIC 套装（成本与形态不对）、自研采集盒（除非量大定制）</td><td>智能相机跑不了 DIC 全场、大面阵高速、多相机融合</td></tr>
 <tr><td>高速线扫／大面阵（＞1GB/s、编码器同步）</td><td>采集卡＋x86 工控机（CXP-12／10GigE＋RDMA）</td><td>线扫不断行＋编码器同步＋大于 1GB/s 三项占其二时，只有这条路物理上够</td><td>树莓派／Mini PC（带宽与确定性不够）</td><td>采集卡按通道与路数询价，价格未核实</td></tr>
 <tr><td>高温／高速／大视场极端工况试验</td><td>商用 DIC 套装（VIC-3D／ARAMIS／新拓等）＋试验机闭环</td><td>高温 2000–2600℃、百万 fps 级高速只有商用套装有产品形态；应变闭环有标准依据</td><td>嵌入式原型（精度与溯源未验证）</td><td>高温、高速参数均为厂商自述，未经第三方复核；价格多为询价制</td></tr>
@@ -351,7 +351,7 @@ footer b{color:#fff}
 </main>
 <footer>
 <b>数据来源：</b>厂商官网与产品页 · 政府采购公示 · 公开报价单 · 第三方实测 · 标准文本 · 开源项目主页。<br>
-<b>口径：</b>证据等级见第 01 节；厂商参数标注 C（厂商自述），不进入结论；单来源内容标注 B；无公开实证的内容标注 D，不进入结论；成本与周期数字为推测或分项依据标明的估计，非承诺；美元金额按 2026-11-25 汇率 1 美元 ≈ 6.67 元人民币折算，仅供参考。<br>
+<b>口径：</b>证据等级见第 01 节；厂商参数标注 C（厂商自述），不进入结论；单来源内容标注 B；无公开实证的内容标注 D，不进入结论；成本与周期数字为推测或分项依据标明的估计，非承诺；金额均为人民币，原价按 2026-11-25 汇率 1 美元 ≈ 6.67 元人民币折算，仅供参考。<br>
 本页为静态单文件，无外部依赖，下载后离线可打开。
 </footer>
 </div>
