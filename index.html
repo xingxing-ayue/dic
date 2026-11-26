@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>工业相机采集与 DIC 嵌入式技术方案</title>
 <style>
 :root{
-  color-scheme:light;
+  color-scheme:light only;
   --page-bg:#eef1f3;
   --surface:#ffffff;
   --text:#1b2127;
@@ -22,10 +23,13 @@
   --th-border:#0a4a7a;
   --zebra:#e8eff4;
   --sum-bg:#d9e9f6;
-  --nav-bg:#252c33;
-  --nav-text:#dde4ea;
-  --nav-border:#171c21;
-  --footer-text:#aeb8c2;
+  --header-bg:#e8f1f8;
+  --header-bg-soft:#f3f8fc;
+  --header-border:#bcd4e6;
+  --nav-bg:#e2edf6;
+  --nav-text:#16324a;
+  --nav-border:#bfd3e2;
+  --footer-text:#4d5964;
   --ev-a:#1e7d32;--ev-b:#5f6b76;--ev-c:#8a5a00;--ev-d:#b3261e;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -33,15 +37,15 @@ html,body{height:100%}
 html{overflow:hidden}
 body{font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;font-size:17px;line-height:1.9;letter-spacing:.02em;color:var(--text);background:var(--page-bg);height:100vh;height:100dvh;overflow:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .wrap{max-width:1240px;margin:0 auto;background:var(--surface);border-left:1px solid var(--border-strong);border-right:1px solid var(--border-strong);height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
-header{background:var(--surface);color:var(--text);padding:28px 36px 20px;border-bottom:3px solid var(--accent);flex:0 0 auto}
+header{background:linear-gradient(180deg,var(--header-bg-soft),var(--header-bg));color:var(--text);padding:28px 36px 20px;border-bottom:2px solid var(--header-border);flex:0 0 auto}
 header .kicker{font-size:12.5px;letter-spacing:2.5px;color:var(--accent-strong);font-weight:600}
-header h1{font-size:27px;line-height:1.4;margin:10px 0 10px;font-weight:700;letter-spacing:.2px}
+header h1{font-size:27px;line-height:1.4;margin:10px 0 10px;font-weight:700;letter-spacing:.2px;color:#20455f}
 header .meta{font-size:13.5px;line-height:1.7;color:var(--muted)}
 main{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:0 36px 52px;background:var(--surface);scrollbar-gutter:stable}
 main:focus{outline:none}
 section{padding:40px 0 22px;display:none}
 section.active{display:block}
-nav{background:var(--nav-bg);flex:0 0 auto;z-index:20;box-shadow:0 1px 4px rgba(0,0,0,.18);border-bottom:3px solid var(--accent)}
+nav{background:var(--nav-bg);flex:0 0 auto;z-index:20;box-shadow:0 1px 3px rgba(27,60,90,.10);border-bottom:3px solid var(--accent)}
 nav ul{list-style:none;display:flex;flex-wrap:nowrap;overflow-x:hidden;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 nav ul::-webkit-scrollbar{display:none}
 nav li{flex:1 1 0;min-width:0}
@@ -75,7 +79,7 @@ main a[href^="http"]{color:var(--link);text-decoration:underline;text-underline-
 .urls a{word-break:break-all}
 .urls li{margin:10px 0}
 footer{background:var(--nav-bg);color:var(--footer-text);font-size:13px;padding:16px 36px;line-height:1.7;flex:0 0 auto}
-footer b{color:#fff}
+footer b{color:var(--heading)}
 @media (min-width:901px) and (max-width:1100px){
   nav li a{padding:12px 3px;font-size:13.5px;line-height:1.5}
   main{padding:0 28px 44px}
