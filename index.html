@@ -80,7 +80,7 @@ footer b{color:#fff}
 <header>
 <div class="kicker">技术文件 · 工业视觉 / 试验测量</div>
 <h1>工业相机采集与 DIC 嵌入式技术方案</h1>
-<div class="meta">编制日期 <span class="num">2026-11-26</span> ｜ 版本 <span class="num">V2.7</span> ｜ 数据来源：厂商官网 · 政府采购公示 · 公开报价单 · 第三方实测 · 标准文本</div>
+<div class="meta">编制日期 <span class="num">2026-11-27</span> ｜ 版本 <span class="num">V2.8</span> ｜ 汇率：1 美元 ≈ 6.67 元（2026-11-25）、1 欧元 ≈ 7.3156 元（2026-11-26）｜ 数据来源：厂商官网 · 政府采购公示 · 公开报价单 · 第三方实测 · 标准文本</div>
 </header>
 <nav aria-label="章节切换">
 <ul role="tablist" aria-label="章节">
@@ -92,6 +92,7 @@ footer b{color:#fff}
 <li role="presentation"><a id="tab-s6" href="#s6" role="tab" data-tab="s6" aria-controls="s6" aria-selected="false" tabindex="-1">需求 · 难点 · 成本</a></li>
 <li role="presentation"><a id="tab-s7" href="#s7" role="tab" data-tab="s7" aria-controls="s7" aria-selected="false" tabindex="-1">资源与标准依据</a></li>
 <li role="presentation"><a id="tab-s8" href="#s8" role="tab" data-tab="s8" aria-controls="s8" aria-selected="false" tabindex="-1">选型建议与结论</a></li>
+<li role="presentation"><a id="tab-s9" href="#s9" role="tab" data-tab="s9" aria-controls="s9" aria-selected="false" tabindex="-1">便捷式集成方案</a></li>
 </ul>
 </nav>
 <main id="content-window" tabindex="0" aria-label="内容窗口">
@@ -211,12 +212,12 @@ footer b{color:#fff}
 <p><b>DIC 市场规模因统计口径不同差异较大。</b>只计系统整机与包含软件两种口径的结果相差约 2 倍，下表分开列示：</p>
 <table>
 <tr><th>口径</th><th>规模</th><th>来源</th></tr>
-<tr><td>窄口径：DIC 系统整机</td><td>2025 年约 <span class="num">USD 1.24–1.55 亿</span>（整体系统 USD 155.0M；其中 3D DIC USD 124.0M、一说 128M，2D DIC USD 33.91M，3D＋2D≈158M 与整体 155M 在 ±3% 内对上）</td><td>Bosson Research／QYResearch；CAGR 约 5.0%–5.3%</td></tr>
-<tr><td>宽口径：含软件</td><td>约 <span class="num">USD 3.0–3.2 亿</span>（2024–2025）：Verified Market Research 系统口径 2024 年 USD 300M、2033 年 USD 600M、CAGR 8.5%；Bosson 软件口径 2025 年 USD 320.5M</td><td>Verified Market Research／Bosson Research</td></tr>
+<tr><td>窄口径：DIC 系统整机</td><td>2025 年约 <span class="num">¥8.3–10.3亿</span>（整体系统 ¥10.3亿；其中 3D DIC ¥8.3亿、一说 ¥8.5亿，2D DIC ¥2.3亿，3D＋2D≈¥10.5亿与整体 ¥10.3亿在 ±3% 内对上）</td><td>Bosson Research／QYResearch；CAGR 约 5.0%–5.3%</td></tr>
+<tr><td>宽口径：含软件</td><td>约 <span class="num">¥20.0–21.3亿</span>（2024–2025）：Verified Market Research 系统口径 2024 年 ¥20.0亿、2033 年 ¥40.0亿、CAGR 8.5%；Bosson 软件口径 2025 年 ¥21.4亿</td><td>Verified Market Research／Bosson Research</td></tr>
 
 
 </table>
-<p>市场份额参考：据 QYResearch 2025 年数据，前五厂商（LaVision 约 16%、Correlated Solutions 约 14%、ZwickRoell、Dantec、ZEISS）合计约占 3D DIC 收入的 55%。价格参考：DIC 系统 2024 年均价约 US$31,428／台，3D DIC 约 US$44,846–46,846／台（Bosson Research 与 QYResearch 数据）。中国市场尚无公开的单独规模统计；据重庆市计量质量检测研究院 2025 年发表数据，国内已装机 DIC 系统 300 余套，每年新增 30–50 套。</p>
+<p>市场份额参考：据 QYResearch 2025 年数据，前五厂商（LaVision 约 16%、Correlated Solutions 约 14%、ZwickRoell、Dantec、ZEISS）合计约占 3D DIC 收入的 55%。价格参考：DIC 系统 2024 年均价约 ¥21.0万／台，3D DIC 约 ¥29.9–31.2万／台（Bosson Research 与 QYResearch 数据）。中国市场尚无公开的单独规模统计；据重庆市计量质量检测研究院 2025 年发表数据，国内已装机 DIC 系统 300 余套，每年新增 30–50 套。</p>
 <p>机器视觉整体市场规模预测（<a href="https://www.grandviewresearch.com/industry-analysis/machine-vision-market">Grand View Research</a>：2025 年 <span class="num">¥1,507亿</span>，2026 年 <span class="num">¥1,688亿</span>，2033 年预计 <span class="num">¥4,069亿</span>，CAGR <span class="num">13.4%（2026–2033）</span>）。该数据为机器视觉整体市场，可作为 DIC 所在行业大盘的背景参考。</p>
 <h3>5.2 国内现状</h3>
 <p>国内 DIC 厂商与研究团队共 <span class="num">21</span> 家：商业厂商以研索仪器、西安新拓三维为代表，另有多家高校与院所团队从事方法研究。商业厂商明细见 5.5 节厂商对比表；本节介绍国内主要团队、应用领域、国产化路径与价格水平。</p>
@@ -236,7 +237,7 @@ footer b{color:#fff}
 <h3>5.3 国外现状</h3>
 <p>欧美厂商以整机＋软件原厂为主：<a href="https://www.correlatedsolutions.com/systems">Correlated Solutions VIC-3D</a>（美国）、<a href="https://www.zeiss.com/metrology/en/systems/optical-3d/3d-testing/aramis-3d-camera.html">ZEISS／GOM ARAMIS</a>（德国）、<a href="https://www.lavision.de/en/products/strainmaster/index.php">LaVision StrainMaster</a>（德国）、<a href="https://www.matchid.eu/">MatchID</a>（比利时）、<a href="https://www.dantecdynamics.com/">Dantec Istra4D</a>（丹麦）、<a href="https://eikosim.com/en/engineering-validation-software/">EikoSim EikoTwin</a>（法国）；<a href="https://www.trilion.com/">Trilion</a>（美国）是 ZEISS 认证经销／集成商、非自研（见 5.6）；<a href="https://www.siemens.com/">Siemens Simcenter Testlab</a> 是平台集成 DIC（基于 MatchID 同步）；<a href="https://photron.com/">Photron</a>（日本）／<a href="https://www.phantomhighspeed.com/">Phantom</a>（美国 AMETEK）是高速相机硬件、不是 DIC 软件（见 5.9 表）。各厂商明细见 5.5 表。</p>
 <p><b>国外应用：</b>航空航天（材料试样→元件→部件→全机认证金字塔；高速 DIC 用于鸟撞、冲击、气囊展开）、汽车（气囊展开、碰撞／跌落、电池托盘耐撞、振动模态）、材料试验（拉伸、压缩、剪切、弯曲、断裂、蠕变、疲劳，是 DIC 最大应用，据 Verified Market Research 数据，工业应用约占 55%（2023））、电子封装（Dantec ThermechDIC 专用于 BGA、倒装、PCB、SSD 的翘曲／CTE／应变热测试，适用标准 JESD22-B112B 与 JEITA ED-7306）。</p>
-<p><b>国外价格：</b>以询价制为主（LaVision 商店全部 Price on request；ZEISS、MatchID、EikoSim、Siemens 均未公开）。公开个例：VIC-3D 整套 <span class="num">USD 62,450／套</span>（其中软件 USD 48,275，俄亥俄州政府报价单 2025-10-01，见 5.7 报价拆分）；均价参考 USD 3.1–4.7 万／台（依 2D／3D 与配置而异，Bosson／QYResearch）。</p>
+<p><b>国外价格：</b>以询价制为主（LaVision 商店全部 Price on request；ZEISS、MatchID、EikoSim、Siemens 均未公开）。公开个例：VIC-3D 整套 <span class="num">¥41.7万／套</span>（其中软件 ¥32.2万，俄亥俄州政府报价单 2025-10-01，见 5.7 报价拆分）；均价参考 ¥20.7–31.3万／台（依 2D／3D 与配置而异，Bosson／QYResearch）。</p>
 <p><b>技术路线三条：</b>（a）局部子区 DIC——主流，VIC-3D、ARAMIS、StrainMaster 均属此路；（b）有限元全局 DIC——EikoSim EikoTwin 直接在 FE 网格上算位移／应变，无需重插值，适于仿真验证；（c）平台集成 DIC——Siemens Testlab＋MatchID，把 DIC 与模态、振动、材料识别（VFM）打通。三条路线的精度同样受散斑、子区、标定、噪声制约，无路线能绕过 DIC 物理限制（见第 02 节技术分析）。</p>
 <p><b>标准与验收框架：</b>VDI/VDE 2634（光学三维测量系统验收与再验证指南，ZEISS ARAMIS 验收采用 VDI 2634-1 与 VDI 2626）；ASTM E2208（非接触光学应变测量系统评估指南，是 Guide 指南、不是 Test Method，也不是 DIC 专用验收标准）；ISO 10360-13:2021（光学三维坐标测量系统验收与再验证）；ISO 9513（金属材料单轴试验用引伸计系统校准）。<b>注意：ISO 9513 是引伸计校准标准，不是 DIC 全场验收标准</b>；“DIC 达 ISO 9513 0.5 级”仅适用于验收测试条件，不等同于全场测量精度。DIC 验收还可参照 iDICs 良好实践指南（2018，第 2 版 2025）。</p>
 <h3>5.4 国内外对比</h3>
@@ -245,7 +246,7 @@ footer b{color:#fff}
 <tr><th>维度</th><th>国外</th><th>国内</th><th>对比结论</th></tr>
 <tr><td>厂商数量与地位</td><td>美德主导，原厂集中：QYResearch 2025 前五（LaVision 约 16%、Correlated 约 14%、ZwickRoell、Dantec、ZEISS）合计约占 3D DIC 收入 55%</td><td>国内共 21 家厂商／团队：商业原厂主要是新拓，研索为代理转国产制造，余为高校学术团队</td><td>国外是整机＋软件原厂，国内是代理／自研／高校三层；国内厂商尚未进入全球份额前五</td></tr>
 <tr><td>产品成熟度</td><td>VIC-3D、ARAMIS、StrainMaster 为迭代多年的整机＋软件产品线，含高速、红外、显微、多相机等完整谱系</td><td>新拓 XTDIC 已成产品线；高校团队多为方法研究、无统一商业产品</td><td>国外产品谱系与版本迭代更完整；国内自研整机已落地，但产品线宽度与长期迭代记录较短</td></tr>
-<tr><td>价格</td><td>询价制为主；公开个例 USD 62,450／套（政府报价单）、均价约 USD 3.1–4.7 万／台（Bosson／QYResearch）</td><td>询价制为主；进口整机成交多在数十万元量级，具体以厂商正式报价为准</td><td>价差主因是配置（相机／高速／高温／软件模块）而非国别；同配置下的国内外价差需以具体项目报价为准</td></tr>
+<tr><td>价格</td><td>询价制为主；公开个例 ¥41.7万／套（政府报价单）、均价约 ¥20.7–31.3万／台（Bosson／QYResearch）</td><td>询价制为主；进口整机成交多在数十万元量级，具体以厂商正式报价为准</td><td>价差主因是配置（相机／高速／高温／软件模块）而非国别；同配置下的国内外价差需以具体项目报价为准</td></tr>
 <tr><td>精度／技术指标</td><td>位移精度 0.01 px 或更优、全局应变精度 10 µε 或更优（LaVision 官方参数，理想条件）；ARAMIS 验收采用 VDI 2634-1</td><td>新拓公开的定量精度指标较少；学术侧有论文级指标（北航 Smart DIC-3D、西工大 0.11 mm）</td><td>指标本身受同一套 DIC 物理限制（第 02 节技术分析）；差距不在纸面极值，而在指标的可复核性与验收背书；目前尚缺同条件下的逐项误差对照，选型应以实测验收为准</td></tr>
 <tr><td>应用领域</td><td>航空全机认证、汽车气囊／碰撞／电池托盘、材料试验、电子封装（ThermechDIC 专用系统，JESD22-B112B）均有商用系统</td><td>裂纹、疲劳、复合材料、高温、土木结构健康监测均有研究与应用；电子封装专用 DIC 系统尚无国产对应产品</td><td>电子封装与全机级航空认证是国产短板；材料试验与土木 SHM 是国产应用最扎实的两块</td></tr>
 <tr><td>国产化程度</td><td>不适用（原厂所在地）</td><td>三条线并行：代理转国产制造（研索）、自研整机（新拓）、高校方法转产品（西交大→新拓）</td><td>国产化在整机与软件层已成线；相机、传感器等上游仍依赖进口（见 5.10），整机国产化率尚无公开量化数据</td></tr>
@@ -256,7 +257,7 @@ footer b{color:#fff}
 <p>下表汇总国内外主要 DIC 厂商与软件产品，均附官网与产品页链接；价格以厂商正式报价为准，公开成交个例单独标注来源。各厂商公布的帧率、应变范围等极值对应不同配置与试验条件，不宜直接横向比较。</p>
 <table>
 <tr><th>厂商</th><th>DIC 产品页</th><th>方案形态</th><th>价格</th></tr>
-<tr><td><a href="https://www.correlatedsolutions.com/">Correlated Solutions VIC-3D</a>（美国）</td><td><a href="https://www.correlatedsolutions.com/systems">VIC-3D 系统页</a></td><td>软件＋相机套装，Windows PC＋USB 加密狗；行业参考基准；零嵌入式化；中国代理：研索仪器。官方参数：应变分辨率可达 5 µε（时间平均条件）、应变范围 0.005% 至 &gt;2,000%，分别对应不同配置，技术分析见第 02 节</td><td>官网未公开／询价制；参考实例：俄亥俄州政府公开报价单（2025-10-01）整套 <span class="num">USD 62,450</span>、软件 <span class="num">USD 48,275</span>，折人民币整套 <span class="num">¥416,542</span>、软件占成交价 <span class="num">77%</span>（见下表）</td></tr>
+<tr><td><a href="https://www.correlatedsolutions.com/">Correlated Solutions VIC-3D</a>（美国）</td><td><a href="https://www.correlatedsolutions.com/systems">VIC-3D 系统页</a></td><td>软件＋相机套装，Windows PC＋USB 加密狗；行业参考基准；零嵌入式化；中国代理：研索仪器。官方参数：应变分辨率可达 5 µε（时间平均条件）、应变范围 0.005% 至 &gt;2,000%，分别对应不同配置，技术分析见第 02 节</td><td>官网未公开／询价制；参考实例：俄亥俄州政府公开报价单（2025-10-01）整套 <span class="num">¥416,542</span>、软件 <span class="num">¥321,994</span>，软件占成交价 <span class="num">77%</span>（见下表）</td></tr>
 <tr><td><a href="https://www.correlatedsolutions.com/">Correlated Solutions VIC-Gauge</a>（美国）</td><td><a href="https://www.correlatedsolutions.com/module/gauge">VIC-Gauge 产品页</a></td><td>虚拟应变片／引伸计：2D 单相机测面内、3D 需双目；实时反馈，最多 4 路模拟输出；只算少量虚拟测点，不是全场高密度相关；2D 离面位移不可测</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.acqtec.com/">研索仪器</a>（中国，VIC-3D 中国代理）</td><td><a href="https://www.acqtec.com/index/detection/detail/id/72.html">VIC-3D 产品页</a></td><td>Correlated Solutions 中国南方区（含港澳）及青海、新疆独家代理；VIC-3D 11.4、高速／超高速、IR 耦合、Blue Hawk／Blue Falcon。官方参数：最高 5,000,000 fps（UHS 机型，400×250 px、128 帧）、应变范围至 2000%、试样尺寸 &gt;100 m，分别对应不同配置</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.zeiss.com/">ZEISS／GOM ARAMIS</a>（德国）</td><td><a href="https://www.zeiss.com/metrology/en/systems/optical-3d/3d-testing/aramis-3d-camera.html">ARAMIS 产品页</a></td><td>双 12MP CMOS＋工作站＋Correlate 软件；高端全场测量；零嵌入式化。官方参数：12M 全分辨率最高 25 fps，SRX 全分辨率最高 335 images/s（相机内置存储）；验收采用 VDI 2634-1／VDI 2626</td><td>未公开／询价制</td></tr>
@@ -270,10 +271,10 @@ footer b{color:#fff}
 <tr><td><a href="https://eikosim.com/">EikoSim EikoTwin</a>（法国）</td><td><a href="https://eikosim.com/en/engineering-validation-software/">工程验证软件页</a></td><td>以软件为主：有限元基 DIC（直接在 FE 网格上算位移／应变），与仿真直接对比；精度仍受网格尺寸、散斑、标定与噪声限制；另有相机系统与数字孪生</td><td>未公开／询价制（订阅制）</td></tr>
 <tr><td><a href="https://www.imetrum.com/">Imetrum Video Gauge／UVX3D</a>（英国）</td><td><a href="https://www.imetrum.com/products/video-gauge/">Video Gauge 产品页</a></td><td>视频引伸计路线：软件＋预标定硬件，UVX3D 双目 3D DIC 全场应变图；DIC 为其中一个工具模块</td><td>询价制</td></tr>
 <tr><td><a href="https://www.revealerhighspeed.com/">千眼狼 Revealer</a>（中国）</td><td><a href="https://www.revealerhighspeed.com/products/digital-image-correlation-DIC-measurement-system/">DIC 测量系统页</a></td><td>自研高速相机＋RVM／RDIC 软件的 2D／3D DIC；高速相机是其主业，DIC 为其产品线之一</td><td>询价制</td></tr>
-<tr><td><a href="https://dicengine.github.io/dice/index.html">DICe</a>（美国 Sandia，开源）</td><td><a href="https://dicengine.github.io/dice/index.html">DICe 项目页</a></td><td>开源 DIC 软件：局部与全局算法、任意形状共形子区、ZNSSD 准则；支持 MPI／线程并行。注意：官网注明全局算法 yet to be released，以官网交付状态为准</td><td>开源免费 <span class="num">USD 0</span>（BSD 3-Clause）</td></tr>
-<tr><td><a href="https://www.ncorr.com/index.php">Ncorr</a>（美国，开源）</td><td><a href="https://www.ncorr.com/index.php">Ncorr 项目页</a></td><td>开源 2D DIC（MATLAB＋C++/MEX），仅 2D、无内置立体／3D 标定；第三方综述称位移精度 0.01–0.05 px（转述，非厂商承诺）；官网最后更新 2018 年 v1.2.2，依赖 MATLAB</td><td>开源免费 <span class="num">USD 0</span>（BSD 3-Clause）；MATLAB 授权费另计</td></tr>
+<tr><td><a href="https://dicengine.github.io/dice/index.html">DICe</a>（美国 Sandia，开源）</td><td><a href="https://dicengine.github.io/dice/index.html">DICe 项目页</a></td><td>开源 DIC 软件：局部与全局算法、任意形状共形子区、ZNSSD 准则；支持 MPI／线程并行。注意：官网注明全局算法 yet to be released，以官网交付状态为准</td><td>开源免费 <span class="num">0 元</span>（BSD 3-Clause）</td></tr>
+<tr><td><a href="https://www.ncorr.com/index.php">Ncorr</a>（美国，开源）</td><td><a href="https://www.ncorr.com/index.php">Ncorr 项目页</a></td><td>开源 2D DIC（MATLAB＋C++/MEX），仅 2D、无内置立体／3D 标定；第三方综述称位移精度 0.01–0.05 px（转述，非厂商承诺）；官网最后更新 2018 年 v1.2.2，依赖 MATLAB</td><td>开源免费 <span class="num">0 元</span>（BSD 3-Clause）；MATLAB 授权费另计</td></tr>
 <tr><td><a href="https://github.com/PolymerGuy/muDIC">MuDIC／µDIC</a>（挪威，开源）</td><td><a href="https://github.com/PolymerGuy/muDIC">MuDIC GitHub 页</a></td><td>开源 Python 2D DIC 工具包：B 样条框架、虚拟实验室（散斑生成／噪声注入）、非线性最小二乘求解；仅 2D；最新 PyPI 版 0.2.1（2021-04-15），版本较旧</td><td>开源免费（MIT License）</td></tr>
-<tr><td><a href="https://github.com/zachtong/pyALDIC">AL-DIC／pyALDIC</a>（美国，开源）</td><td><a href="https://pypi.org/project/al-dic/1.0.1/">al-dic PyPI 页</a></td><td>开源 2D AL-DIC（ADMM 全局正则化＋局部 IC-GN），含 pyALDIC-3D 双目版；自适应四叉树网格、掩膜感知子区分割；公开说明指出 2 阶形函数随机误差约翻倍；相关软件论文为预印本</td><td>开源免费 <span class="num">USD 0</span>（BSD-3-Clause）；MATLAB 参考版需 MATLAB 授权</td></tr>
+<tr><td><a href="https://github.com/zachtong/pyALDIC">AL-DIC／pyALDIC</a>（美国，开源）</td><td><a href="https://pypi.org/project/al-dic/1.0.1/">al-dic PyPI 页</a></td><td>开源 2D AL-DIC（ADMM 全局正则化＋局部 IC-GN），含 pyALDIC-3D 双目版；自适应四叉树网格、掩膜感知子区分割；公开说明指出 2 阶形函数随机误差约翻倍；相关软件论文为预印本</td><td>开源免费 <span class="num">0 元</span>（BSD-3-Clause）；MATLAB 参考版需 MATLAB 授权</td></tr>
 <tr><td><a href="https://gitlab.com/damien.andre/pydic">pyDIC／pydic</a>（法国，开源）</td><td><a href="https://gitlab.com/damien.andre/pydic">pyDIC GitLab 页</a></td><td>开源 Python 局部 2D DIC。注意：斯洛文尼亚 LADISK 另有一个同名 pyDIC（PyPI py-dic），为不同项目；美国交通部独立测试显示其位移场输出不适用于疲劳裂纹检测试验</td><td>开源免费（GPLv3）</td></tr>
 </table>
 <h3>5.6 相关厂商定位说明</h3>
@@ -289,20 +290,24 @@ footer b{color:#fff}
 <h3>5.7 典型系统报价拆分：VIC-3D（俄亥俄州政府采购报价单，2025-10，<a href="https://api.obm.ohio.gov/files/download/44/9a8fab0d-e97a-4167-b9c0-8095cb9f0d83/inline">报价单原文</a>）</h3>
 <table>
 <tr><th>项目</th><th>金额</th><th>依据</th></tr>
-<tr><td>VIC-3D 软件</td><td class="num">¥321,994</td><td>报价单原价；占标价 64%、占成交价 77%</td></tr>
-<tr><td>2 台 5MP 相机（各 ¥8,104）</td><td class="num">¥16,208</td><td>报价单原价</td></tr>
+<tr><td>VIC-3D 软件</td><td class="num">¥321,994</td><td>报价单原价；占标价 64%、占成交价 77%（含 VIC-2D 7、Vic-Snap、1 年维护、2 天培训、2 年质保）</td></tr>
 <tr><td>工控机</td><td class="num">¥32,216</td><td>报价单原价</td></tr>
-<tr><td>标定装置</td><td class="num">¥34,917</td><td>报价单原价</td></tr>
-<tr><td>DAQ</td><td class="num">¥15,775</td><td>报价单原价</td></tr>
-<tr><td>灯光</td><td class="num">¥7,437</td><td>报价单原价</td></tr>
-<tr><td>安装架</td><td class="num">¥21,311</td><td>报价单原价</td></tr>
-<tr class="sumrow"><td>已列分项合计</td><td class="num">¥449,858</td><td>上列七项相加，闭合</td></tr>
-<tr><td>标价合计与分项合计的差额</td><td class="num">¥53,560</td><td>报价单未逐项列明（培训、维护、运费等），不拆分</td></tr>
-<tr><td>标价合计</td><td class="num">¥503,418</td><td>报价单原价</td></tr>
-<tr><td>折扣</td><td class="num">−¥86,877</td><td>报价单原价</td></tr>
+<tr><td>2 台 5MP 相机（各 ¥8,104）</td><td class="num">¥16,208</td><td>报价单原价</td></tr>
+<tr><td>Schneider 50mm 镜头 ×2</td><td class="num">¥18,142</td><td>报价单原价；带偏振滤光片</td></tr>
+<tr><td>Tokina 100mm 镜头 ×2</td><td class="num">¥11,339</td><td>报价单原价；带 C-F 转接环与偏振滤光片</td></tr>
+<tr><td>DAQ</td><td class="num">¥15,775</td><td>报价单原价；6 通道</td></tr>
+<tr><td>灯光</td><td class="num">¥7,437</td><td>报价单原价；CSI LED 照明系统带定位臂</td></tr>
+<tr><td>安装架</td><td class="num">¥21,311</td><td>报价单原价；铝合金立体安装通道带微调</td></tr>
+<tr><td>标定装置</td><td class="num">¥34,917</td><td>报价单原价；8 块铝复合标定靶＋玻璃网格组</td></tr>
+<tr><td>散斑套件</td><td class="num">¥11,873</td><td>报价单原价；标准视场</td></tr>
+<tr><td>喷枪系统</td><td class="num">¥12,206</td><td>报价单原价；Iwata 精细散斑喷枪</td></tr>
+<tr class="sumrow"><td>11 项分项合计</td><td class="num">¥503,418</td><td>上列十一项相加，闭合；与报价单标价一致，无缺口</td></tr>
+<tr><td>学术折扣</td><td class="num">−¥81,207</td><td>报价单原价</td></tr>
+<tr><td>竞争折扣</td><td class="num">−¥5,670</td><td>报价单原价</td></tr>
+<tr><td>折扣合计</td><td class="num">−¥86,877</td><td>报价单原价</td></tr>
 <tr class="sumrow"><td>成交总价</td><td class="num">¥416,542≈ ¥41.7万</td><td>标价减折扣；分项按 6.67 折算取整，合计存在 ±¥1 取整差</td></tr>
 </table>
-<p>含 2 天培训＋1 年维护。结论：软件是最大单项，占标价 64%、占成交价 77%；六项硬件合计 <span class="num">¥127,864</span>，占标价 25%。嵌入式化省掉的主要是硬件与集成成本，软件成本省不掉。来源：政府采购报价单。</p>
+<p>含 2 天培训＋1 年维护。结论：软件是最大单项，占标价 64%、占成交价 77%；其余十项硬件与耗材合计 <span class="num">¥181,424</span>，占标价 36%。嵌入式化省掉的主要是硬件与集成成本，软件成本省不掉。来源：政府采购报价单。</p>
 <h3>5.8 产线视觉参照</h3>
 <table>
 <tr><th>厂商／产品</th><th>嵌入式形态</th><th>价格带／备注</th></tr>
@@ -318,7 +323,7 @@ footer b{color:#fff}
 <p><b>先说清：相机本身不是 DIC 系统</b>，须另配 DIC 软件、镜头、光源、散斑与标定；下表 DIC 适用性基于产品参数与公开应用实例评估，不代表厂商认证。<b>选型铁律：</b>准静态 DIC 优先全局快门、单色、高分辨率型号；高速／动态 DIC 优先全局快门、高帧率型号；<b>分辨率与帧率不可兼得</b>（读出带宽近似恒定，高分辨率型号满幅帧率必然低，高速必须降分辨率／ROI 换帧率）；<b>滚动快门型号不适合动态 DIC</b>（只宜准静态）；多相机 DIC 还须核对硬件触发／PTP 同步与 DIC 软件的相机支持清单。价格以厂商正式报价为准，经销商公开价单独标注。</p>
 <table>
 <tr><th>厂商</th><th>产品页</th><th>产品线与是否适合 DIC</th><th>价格</th></tr>
-<tr><td><a href="https://www.baslerweb.com/">Basler</a>（德国）</td><td><a href="https://www.baslerweb.com/en/cameras/ace2/">ace 2 产品页</a></td><td>面阵／线扫／3D／嵌入式视觉相机，GigE／USB3／CoaXPress；ace2 最高 25MP；boost CXP 45MP／150fps；pylon SDK 基于 GenICam，支持 Linux x86 与 Linux ARM。<b>适合 DIC：</b>独立论文已实际用 Basler ace 做 DIC 疲劳试验与海冰压缩 DIC；选全局快门单色型号，高速动态须核对满分辨率帧率与触发延迟。<b>快门与满幅帧率：</b>ace 2 全局与滚动快门型号均有，须按型号选全局快门；a2A4096-38mgc 为 12.3 MP、满幅 38 fps；高分辨率与高帧率不可兼得</td><td>官网价：a2A4096-38mgc <span class="num">EUR 1,159</span>、a2A2840-57mgc <span class="num">EUR 779</span>（欧元原价）；其余型号询价制</td></tr>
+<tr><td><a href="https://www.baslerweb.com/">Basler</a>（德国）</td><td><a href="https://www.baslerweb.com/en/cameras/ace2/">ace 2 产品页</a></td><td>面阵／线扫／3D／嵌入式视觉相机，GigE／USB3／CoaXPress；ace2 最高 25MP；boost CXP 45MP／150fps；pylon SDK 基于 GenICam，支持 Linux x86 与 Linux ARM。<b>适合 DIC：</b>独立论文已实际用 Basler ace 做 DIC 疲劳试验与海冰压缩 DIC；选全局快门单色型号，高速动态须核对满分辨率帧率与触发延迟。<b>快门与满幅帧率：</b>ace 2 全局与滚动快门型号均有，须按型号选全局快门；a2A4096-38mgc 为 12.3 MP、满幅 38 fps；高分辨率与高帧率不可兼得</td><td>官网价：a2A4096-38mgc <span class="num">¥8,479</span>、a2A2840-57mgc <span class="num">¥5,699</span>（按 1 欧元 ≈ 7.3156 元折算，2026-11-26）；其余型号询价制</td></tr>
 <tr><td><a href="https://www.teledynevisionsolutions.com/">Teledyne FLIR IIS</a>（美国／加拿大）</td><td><a href="https://www.teledynevisionsolutions.com/categories/cameras/?c1073743453_f4829=USB3">相机总页</a></td><td>面阵／线扫／3D／红外／SWIR 相机，Blackfly S、Forge、Oryx 等 650+ 型号。<b>基本适合 DIC 配套：</b>全局快门、单色可选、硬件触发／PTP 同步；须另配 DIC 软件。<b>快门与满幅帧率：</b>Blackfly S 为全局快门；BFS-GE-16S2M-BD2 1.6 MP 满幅 78 fps、BFS-U3-04S2 0.4 MP 最高 522 fps、BFS-U3-161S7 16.1 MP 仅 23 fps；Forge 5GigE 5.0–24.5 MP、IEEE 1588 PTP 同步；高分辨率与高帧率不可兼得。注意：其半导体应用页提到的 DIC 指微分干涉差显微，与数字图像相关无关</td><td>询价制</td></tr>
 <tr><td><a href="https://www.teledynedalsa.com/">Teledyne DALSA</a>（加拿大）</td><td><a href="https://www.teledynedalsa.com/en/products/imaging/cameras/Linea-HS/">Linea HS 产品页</a></td><td>线扫相机为主：Linea／Linea HS TDI 线扫、AxCIS 接触式线扫，配 Xtium 采集卡。<b>DIC 适用性：</b>原则上适合 DIC，有限制</b>——面阵 Genie Nano／Falcon2 为全局快门、单色可选、硬件触发＋PTP 同步；Genie Nano M1450 1.5 MP 满幅 76 fps、M4020 12.3 MP 满幅仅 9.7 fps（1 GigE 带宽限制），Falcon2 12M 满幅 58 fps、4M 168 fps（Camera Link）；高速／动态 DIC 需 Camera Link 等更快接口或降分辨率／ROI；TurboDrive 压缩不得用于 DIC 计量，须用未压缩数据；<b>线扫型号不适合面阵 DIC</b>；厂商未作 DIC 专用定位，适用性按参数评估</td><td>询价制</td></tr>
 <tr><td><a href="https://www.alliedvision.com/">Allied Vision</a>（德国）</td><td><a href="https://www.alliedvision.com/en/products/area-scan-cameras/alvium/alvium-u">Alvium U 产品页</a></td><td>面阵相机 Alvium／Goldeye／Mako／Prosilica，GigE、USB3、嵌入式 MIPI／GMSL2。<b>DIC 适用性：</b>适合 DIC，但有条件</b>——多篇同行评审 DIC 研究实际使用（Manta 配 Aramis、Pike／Stingray 配 VIC-3D／VIC-2D）；单色全局快门、GenICam、触发 I/O 可满足常规 DIC；Alvium G1-1242 12.4 MP 全局快门满幅仅 9.5 fps、Alvium 1800 U-1236m 12.4 MP 满幅 22 fps、Manta G-158 1.6 MP 75 fps，高分辨率与高帧率不可兼得，高速动态须降分辨率换帧率；Goldeye SWIR 仅 0.08 MP，不适合常规可见光 DIC；DIC 软件、镜头、光源与双机同步须另配</td><td>询价制</td></tr>
@@ -329,17 +334,17 @@ footer b{color:#fff}
 <tr><td><a href="https://www.dahuasecurity.com">大华股份 Dahua／iRAYPLE 华睿科技</a>（中国）</td><td><a href="https://www.irayple.com/en/product/vision?id=9&amp;navId=106">iRAYPLE 工业相机产品页</a></td><td>面阵／线扫工业相机：A 系列 0.3–25 MP，GigE／USB3.0／CameraLink，兼容 GigE Vision／GenICam。<b>条件适合 DIC：</b>代表型号 A3A20 为<b>滚动快门</b>且 GigE 版仅 8 fps，只宜准静态；动态 DIC 应选其全局快门高分辨率型号并实测，未公开发布与 DIC 软件的兼容认证</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.euresys.com/">Euresys</a>（比利时）</td><td><a href="https://www.euresys.com/en/products/frame-grabber/coaxlink-qsfp28/">Coaxlink 产品页</a></td><td>采集卡：CoaXPress／CoaXPress-over-Fiber 帧抓取器 Coaxlink、Grablink。<b>DIC 适用性：</b>采集卡厂商、无相机快门，满幅帧率取决于所接相机</td><td>询价制</td></tr>
 <tr><td><a href="https://www.adlinktech.com/">Adlink 凌华</a>（中国台湾）</td><td><a href="https://www.adlinktech.com/en/Machine_Vision_Frame_Grabbers_Video_Capture_Cards.aspx">采集卡总页</a></td><td>采集卡：GigE Vision／USB3 Vision／Camera Link／CoaXPress 帧抓取器，另有智能相机 NEON。<b>DIC 适用性：</b>以采集卡为主、无相机快门，满幅帧率取决于所接相机</td><td>询价制</td></tr>
-<tr><td><a href="https://www.teledynevisionsolutions.com">Point Grey／FLIR Blackfly S</a>（加拿大，现属 Teledyne）</td><td><a href="https://www.teledynevisionsolutions.com/en-in/products/blackfly-s-usb3/?model=BFS-U3-161S7C-C&amp;vertical=machine%20vision&amp;segment=iis">Blackfly S USB3 产品页</a></td><td>全系全局快门 CMOS、Sony Pregius、单色与彩色、1.3–16.1 MP；硬件触发＋IEEE 1588 同步。<b>适合 DIC 配套（相机本体）：</b>高分辨率型号帧率低（12.3 MP 约 9.9 fps），高速动态应选低像素高帧率型号（如 1.7 MP 196 fps）</td><td><span class="num">USD 371</span>（板级 GigE 1.6 MP 官网标价）至 <span class="num">USD 3,030</span>（12.3 MP GigE，经销商 Edmund Optics）；无单一官方 MSRP</td></tr>
+<tr><td><a href="https://www.teledynevisionsolutions.com">Point Grey／FLIR Blackfly S</a>（加拿大，现属 Teledyne）</td><td><a href="https://www.teledynevisionsolutions.com/en-in/products/blackfly-s-usb3/?model=BFS-U3-161S7C-C&amp;vertical=machine%20vision&amp;segment=iis">Blackfly S USB3 产品页</a></td><td>全系全局快门 CMOS、Sony Pregius、单色与彩色、1.3–16.1 MP；硬件触发＋IEEE 1588 同步。<b>适合 DIC 配套（相机本体）：</b>高分辨率型号帧率低（12.3 MP 约 9.9 fps），高速动态应选低像素高帧率型号（如 1.7 MP 196 fps）</td><td><span class="num">¥2,475</span>（板级 GigE 1.6 MP 官网标价）至 <span class="num">¥20,210</span>（12.3 MP GigE，经销商 Edmund Optics）；无单一官方 MSRP</td></tr>
 <tr><td><a href="https://www.sony-semicon.com/en/products/is/industry/index.html">Sony</a>（日本）</td><td><a href="https://www.image-sensing-solutions.eu/XCG-CG510.html">XCG-CG510 产品页</a></td><td>XCG GigE 相机与 Pregius／Pregius S 全局快门传感器；XCG-CG510 为 5.1 MP、23 fps；XCL-SG510 为 5.1 MP、154 fps（Camera Link）。<b>基本适合 DIC：</b>全系全局快门无卷帘畸变，黑白型号更适合灰度相关；只提供相机／传感器，须另配软件镜头光源</td><td>未公开／询价制</td></tr>
-<tr><td><a href="https://sentech.co.jp/en/company/overview">Omron Sentech 先特克</a>（日本）</td><td><a href="https://sentech.co.jp/en/products_cate/gige-camera/gige-areacamera">GigE 面阵相机页</a></td><td>面阵相机 0.4–20 MP，GigE／USB3／Camera Link／CoaXPress。<b>条件适合 DIC：</b>STC-MBS891U3V（8.9 MP 单色全局快门）、STC-MBS241U3V（2.3 MP 单色全局快门 163 fps）可用；20 MP 的 STC-MCS2041U3V 为滚动快门，不适合动态 DIC；无厂商 DIC 标定／同步宣称，须实测</td><td>未公开／询价制；经销商示例 STC-CMC120ACXP <span class="num">USD 6,893</span>（非官网价）</td></tr>
+<tr><td><a href="https://sentech.co.jp/en/company/overview">Omron Sentech 先特克</a>（日本）</td><td><a href="https://sentech.co.jp/en/products_cate/gige-camera/gige-areacamera">GigE 面阵相机页</a></td><td>面阵相机 0.4–20 MP，GigE／USB3／Camera Link／CoaXPress。<b>条件适合 DIC：</b>STC-MBS891U3V（8.9 MP 单色全局快门）、STC-MBS241U3V（2.3 MP 单色全局快门 163 fps）可用；20 MP 的 STC-MCS2041U3V 为滚动快门，不适合动态 DIC；无厂商 DIC 标定／同步宣称，须实测</td><td>未公开／询价制；经销商示例 STC-CMC120ACXP <span class="num">¥45,976</span>（非官网价）</td></tr>
 <tr><td><a href="https://www.ximea.com">Ximea</a>（德国）</td><td><a href="https://www.ximea.com/products/industrial-grade-cameras">工业相机产品页</a></td><td>xiB-64 PCIe Gen3 高速系列（12–65 Mpix、最高 3500+ fps 为 1.1 Mpix 型号）、xiC／xiQ USB3。<b>适合 DIC：</b>官网将 digital image correlation 列为 xiB-64 适用应用之一；全局快门，PCIe 直传可长时连续采集；精度须以 DIC 软件实测标定为准</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.emergentvisiontec.com/">Emergent Vision Technologies</a>（加拿大）</td><td><a href="https://www.emergentvisiontec.com/products/">产品总页</a></td><td>10／25／100／200GigE 面阵相机，0.3–105 MP、16–3463 fps；多相机同步 &lt;1 µs。<b>基本适合 DIC：</b>2026 年 IOP 论文实际用 HR-5000-S-PC 配开源 DICe 做 DIC 验证；厂商不提供 DIC 软件与标定；高像素型号仅 30–80 fps，10GigE 以上须配专用网卡／光纤</td><td>未公开／询价制</td></tr>
-<tr><td><a href="https://www.pco.de/">PCO</a>（德国，现属 Excelitas）</td><td><a href="https://www.excelitas.com/product-category/pco">PCO 产品页</a></td><td>pco.edge sCMOS 4.2–26 MP、16-bit、低读出噪声，全分辨率 40–100 fps。<b>适合静态／准静态 DIC：</b>有 arXiv 论文用 pco.edge 5.5 做 DIC 精度实验；注意 pco.edge 为滚动快门，高速 DIC 应优先核实全局快门型号（如 pco.dimax）</td><td>官网未公开／询价制；经销商 DigiKey pco.edge 4.2 LT <span class="num">USD 11,319.18</span></td></tr>
+<tr><td><a href="https://www.pco.de/">PCO</a>（德国，现属 Excelitas）</td><td><a href="https://www.excelitas.com/product-category/pco">PCO 产品页</a></td><td>pco.edge sCMOS 4.2–26 MP、16-bit、低读出噪声，全分辨率 40–100 fps。<b>适合静态／准静态 DIC：</b>有 arXiv 论文用 pco.edge 5.5 做 DIC 精度实验；注意 pco.edge 为滚动快门，高速 DIC 应优先核实全局快门型号（如 pco.dimax）</td><td>官网未公开／询价制；经销商 DigiKey pco.edge 4.2 LT <span class="num">¥75,499</span></td></tr>
 <tr><td><a href="https://andor.oxinst.com">Andor／Oxford Instruments</a>（英国）</td><td><a href="https://andor.oxinst.com/products/scientific-cmos-emccd-and-ccd-research-cameras">科学相机产品页</a></td><td>sCMOS／EMCCD 科学相机 4.2–24.5 MP。<b>部分匹配、有条件适用：</b>多数 sCMOS 为滚动快门，高速动态 DIC 应选全局快门型号（CB2、iStar）；官网未见力学 DIC 专门宣称，深冷低噪声对常规 DIC 性能过剩、性价比低。其 Dragonfly 提到的 DIC 指微分干涉对比显微，不是力学 DIC</td><td>未公开／询价制（官网 Request Pricing）</td></tr>
-<tr><td><a href="https://www.hamamatsu.com">Hamamatsu 滨松</a>（日本）</td><td><a href="https://www.hamamatsu.com/us/en/product/cameras/cmos-cameras/C13440-20CU.html">ORCA-Flash4.0 V3 产品页</a></td><td>ORCA sCMOS 2048×2048、16-bit、低读出噪声，满幅 40–100 fps。<b>有条件适用：</b>低速／准静态 DIC 可用；ORCA-Flash4.0 V3 是<b>滚动快门</b>，高速动态不理想；官网定位为生命科学成像，旧款资料中的 DIC 指微分干涉相衬显微术，不是力学 DIC</td><td>官网未公开／询价制；经销商 ORCA-Flash4.0 V3 <span class="num">USD 14,500</span>（参考价）</td></tr>
+<tr><td><a href="https://www.hamamatsu.com">Hamamatsu 滨松</a>（日本）</td><td><a href="https://www.hamamatsu.com/us/en/product/cameras/cmos-cameras/C13440-20CU.html">ORCA-Flash4.0 V3 产品页</a></td><td>ORCA sCMOS 2048×2048、16-bit、低读出噪声，满幅 40–100 fps。<b>有条件适用：</b>低速／准静态 DIC 可用；ORCA-Flash4.0 V3 是<b>滚动快门</b>，高速动态不理想；官网定位为生命科学成像，旧款资料中的 DIC 指微分干涉相衬显微术，不是力学 DIC</td><td>官网未公开／询价制；经销商 ORCA-Flash4.0 V3 <span class="num">¥96,715</span>（参考价）</td></tr>
 <tr><td><a href="https://lumenera.com">Lumenera</a>（加拿大，现属 Teledyne）</td><td><a href="https://www.teledynevisionsolutions.com/products/lt-series-usb3/?model=LT-M2420&amp;vertical=tvs&amp;segment=iis">Lt 系列 USB3 产品页</a></td><td>Lt 系列 USB3 工业相机：Lt-M2420 为 5.0 MP、55 fps、Sony IMX264 全局快门单色。<b>条件适合：</b>覆盖准静态与低速 DIC 常用区间；厂商资料中的 DIC 指显微镜微分干涉差，不是力学 DIC，尚无公开的力学 DIC 系统应用案例；12.3 MP 型号仅 22 fps</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.toshiba-teli.co.jp/en/">Toshiba Teli 东芝泰力</a>（日本）</td><td><a href="https://www.toshiba-teli.co.jp/en/products/industrial-camera/usb-camera-bu300m.htm">BU300M 产品页</a></td><td>USB3／GigE／Camera Link／CoaXPress 相机 0.4–67 MP，多款全局快门黑白型号、总线同步。<b>基本适合 DIC，须按型号选型：</b>滚动快门型号（如 BU2006M）不适合动态 DIC；GigE 高分辨率帧率受限，高速应选 Camera Link／CoaXPress 型号（如 BC040M 523 fps）；官网无 DIC 专用声明，须以 DIC 软件支持清单为准</td><td>未公开／询价制（目录写明联系经销商询价）</td></tr>
-<tr><td><a href="https://www.mightexsystems.com">Mightex</a>（加拿大）</td><td><a href="https://www.mightexsystems.com/product/usb3-0-1-7mp-camera-high-sensitivity-high-speed-and-low-noise/">USB3.0 1.7 MP 相机页</a></td><td>USB3.0 1.7 MP SXE（Sony IMX432 全局快门、95 fps、外部触发）。<b>条件适合／边缘适合，不是首选：</b>旗舰全局快门仅 1.7 MP，低于大视场高精度 DIC 通常的 5 MP+；5 MP 型号为 USB2.0 滚动快门、约 6 fps；无 DIC 专用宣称或兼容性证据</td><td>官网标价 <span class="num">USD 2,295–2,445</span>（USB3.0 1.7 MP，FCA California）</td></tr>
+<tr><td><a href="https://www.mightexsystems.com">Mightex</a>（加拿大）</td><td><a href="https://www.mightexsystems.com/product/usb3-0-1-7mp-camera-high-sensitivity-high-speed-and-low-noise/">USB3.0 1.7 MP 相机页</a></td><td>USB3.0 1.7 MP SXE（Sony IMX432 全局快门、95 fps、外部触发）。<b>条件适合／边缘适合，不是首选：</b>旗舰全局快门仅 1.7 MP，低于大视场高精度 DIC 通常的 5 MP+；5 MP 型号为 USB2.0 滚动快门、约 6 fps；无 DIC 专用宣称或兼容性证据</td><td>官网标价 <span class="num">¥15,308–16,308</span>（USB3.0 1.7 MP，FCA California）</td></tr>
 <tr><td><a href="https://www.svs-vistek.com">SVS-Vistek</a>（德国）</td><td><a href="https://www.svs-vistek.com/en/industrial-cameras/svs-camera-detail.php?id=hr51MXGE">hr51MXGE 产品页</a></td><td>SVCam-HR 高分辨率系列 11–65 MP、全局快门、10GigE／CoaXPress。<b>适合 DIC（准静态／低速为主）：</b>hr25CCX 有 DIC 实测报道（配 VIC-2D）；高分辨率下帧率仅约 17–35 fps，高速动态须另选 FXO 高帧率型号；相机本身不含 DIC 软件</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.adimec.com">Adimec</a>（荷兰，现属 Teledyne）</td><td><a href="https://www.adimec.com/cameras/machine-vision-cameras-for-inline-inspections-and-metrology/sapphire-series/">SAPPHIRE 系列页</a></td><td>SAPPHIRE／QUARTZ／DIAMOND 系列，全局快门 CMOS，12–105 Mp、30–227.9 fps，CoaXPress。<b>适合 DIC 候选（按参数推断）：</b>静态高精度与高速动态均有对应型号；官网未列 DIC 应用案例与专用认证；高分辨率与高帧率不可兼得（105 Mp 仅 110 fps）</td><td>未公开／询价制</td></tr>
 <tr><td><a href="https://www.imperx.com">Imperx</a>（美国）</td><td><a href="https://www.imperx.com/cmos-cameras/c4120/">Cheetah C4120 产品页</a></td><td>Cheetah 系列全系 Sony Pregius 全局快门，2.86–31 MP，高速型号支持 PTP 同步（2.86 MP 最高 371.8 fps）。<b>条件适合 DIC：</b>官网未列 DIC 应用、未声明与 DIC 软件兼容性；高分辨率型号帧率低（20 MP 仅 28 fps），高速 DIC 须以分辨率换帧率并核实双目同步精度</td><td>未公开／询价制</td></tr>
@@ -402,7 +407,7 @@ footer b{color:#fff}
 <tr class="sumrow"><td>合计（已核价 ¥57,788 ＋估算 ¥2,001–5,336）</td><td class="num">¥59,789–63,124</td><td>分项相加，闭合；镜头、集成人工不含在内</td></tr>
 </table>
 <p>中档说明：标定装置 <span class="num">¥34,917</span> 占已核价部分的 60%，是报价单中的标定套件价；若用简易标定板自制，总价可大幅下降，但精度与溯源需另行验证。</p>
-<p><b>高性能档：全场 DIC 工作站（x86 工控机＋商用 DIC 软件）。</b>以第 05 节 VIC-3D 报价拆分为准：已列分项合计 <span class="num">¥449,858</span>，标价 <span class="num">¥503,418</span>，折扣后成交 <span class="num">¥416,542≈ ¥41.7万</span>。镜头未列，待询价；本档 GigE 直连不需要采集卡，上 CXP-12／10GigE 时采集卡待询价；报价含 2 天培训＋1 年维护，现场集成人工待询价。</p>
+<p><b>高性能档：全场 DIC 工作站（x86 工控机＋商用 DIC 软件）。</b>以第 05 节 VIC-3D 报价拆分为准：11 项分项合计 <span class="num">¥503,418</span>，折扣后成交 <span class="num">¥416,542≈ ¥41.7万</span>。镜头已含在报价内（Schneider 50mm＋Tokina 100mm）；本档 GigE 直连不需要采集卡，上 CXP-12／10GigE 时采集卡待询价；报价含 2 天培训＋1 年维护，现场集成人工待询价。</p>
 <p>价格带参考：单颗工业相机 <span class="num">¥2,001–46,690</span>；智能相机 <span class="num">¥1.3万–10.0万</span>；视觉控制器／高端系统 <span class="num">¥9.3万–33.4万</span>；整线集成费常超硬件本身（<span class="num">¥13.3万–100.1万</span>）。数据来源：厂商与分销商公开价格。</p>
 <h3>6.4 开发成本与周期：九阶段拆分</h3>
 <p>以下为工作量估算，不构成报价；开发总价按项目人力与范围另行核算。各阶段部分并行，总周期不等于各阶段相加。</p>
@@ -475,6 +480,137 @@ footer b{color:#fff}
 <tr><td>高温／高速／大视场极端工况试验</td><td>商用 DIC 套装（VIC-3D／ARAMIS／新拓等）＋试验机闭环</td><td>高温、高速 DIC 目前只有商用套装具备完整产品形态；应变闭环有标准依据</td><td>嵌入式原型（精度与溯源尚待验证）</td><td>高温、高速参数以厂商正式技术文件为准，采购前建议实测验证；价格多为询价制</td></tr>
 </table>
 <p><b>结论：</b>没有一家厂商的方案能同时满足全部六个场景。机会在“边缘采集＋分级计算”：采集、预处理、存储传输、显示交互可以做进盒子，轻量 DIC 可以部分进盒子，全场高精度 3D-DIC 目前留工作站。风险也在同一处：实时亚像素相关算力、标定精度、双相机同步三道关，没有一家搬走；软件是 DIC 成本的大头，嵌入式化省硬件与集成成本，不省软件成本。选型先定场景，再定平台；关键性能指标建议在采购前实测，并写入合同验收条款。</p>
+</section>
+
+<section id="s9" role="tabpanel" aria-labelledby="tab-s9" tabindex="0">
+<h2><span class="no">09</span>便捷式集成方案</h2>
+<p>本章按设备路线给选型对比：每条路线一张表，2D 为主线、3D 并行对照，列选型、设备、性能、功能、预期、解决问题与边界。口径：金额只写人民币，1 美元 ≈ 6.67 元（2026-11-25）、1 欧元 ≈ 7.3156 元（2026-11-26）、1 英镑 ≈ 8.7378 元（2026-11-27）；成本为硬件合计，不含商用 DIC 软件授权（另计，见各表），不含税费与运费；证据等级 <span class="ev ev-a">A</span> 两个以上独立来源一致、<span class="ev ev-b">B</span> 单来源、<span class="ev ev-c">C</span> 厂商自述、<span class="ev ev-d">D</span> 未核实，不进结论。</p>
+<h3>9.1 横向对照总表</h3>
+<table>
+<tr><th>路线</th><th>定位</th><th>2D 硬件合计</th><th>3D 硬件合计</th><th>商用 DIC 软件</th><th>关键瓶颈</th></tr>
+<tr><td>树莓派 Pi 5／CM5</td><td>教学、初筛、最低成本 2D</td><td class="num">¥25,804</td><td class="num">¥37,536</td><td>不能跑</td><td>USB 实际约 380 MB/s、NVMe Gen2 写约 450 MB/s，双路满速无解</td></tr>
+<tr><td>mini PC x86</td><td>唯一能直跑 Windows 商用软件的便携路线</td><td class="num">¥31,956–37,826</td><td class="num">¥51,059（Sigma）</td><td>能跑 VIC-2D、CORRELATE</td><td>无 PCIe 插槽、无独显；认证显卡一条无机型满足</td></tr>
+<tr><td>Jetson 全系</td><td>自研＋AI 预处理，中速采集</td><td class="num">¥28,600</td><td class="num">¥40,766</td><td>不能跑</td><td>4 个 USB 口是否共用控制器未核实；无 DIC 吞吐实测</td></tr>
+<tr><td>FPGA Kria</td><td>硬实时预处理与确定性同步</td><td class="num">¥27,600（KV260）</td><td class="num">¥39,766（KV260）</td><td>不能跑</td><td>无现成全场相关核，开发门槛最高</td></tr>
+<tr><td>国产 ARM</td><td>最低成本多路 MIPI 采集</td><td class="num">¥26,806（RK3588）</td><td class="num">¥38,972（RK3588）</td><td>不能跑</td><td>开源 DIC 无 ARM 实测；生态弱</td></tr>
+<tr><td>采集卡＋工控机</td><td>高速、线扫、编码器同步</td><td class="num">已核价 ¥90,173（卡＋工控机＋标定装置，不含相机镜头软件）</td><td class="num">同 2D 口径，双路另加相机与同步</td><td>能跑</td><td>不是便携盒子形态；CXP 相机价格未核实</td></tr>
+<tr><td>智能相机</td><td>产线检测工位</td><td class="num">单台 ¥8,054–60,030（已核价型号）</td><td class="num">不适用</td><td>不适用</td><td>跑不了 DIC 全场，无双相机同步</td></tr>
+<tr><td>笔记本／移动工作站</td><td>现场即采即算</td><td class="num">¥47,471</td><td class="num">¥59,637</td><td>能跑</td><td>重负载续航 2–3 小时；1TB 满速双路约 22 分钟</td></tr>
+<tr><td>商用便携整机</td><td>开箱即用</td><td class="num">ARAMIS 2D 起价 ¥86,100（不含税）</td><td class="num">VIC-3D 整套成交 ¥416,542</td><td>自带</td><td>全部询价制；Q-480 现售未核实</td></tr>
+</table>
+<p>共通项：成像链单价各路线沿用同一批已核价——Basler ace2 a2A2448-75ucPRO <span class="num">¥7,704</span>、Kowa LM12HC 镜头 <span class="num">¥1,934</span>、LED 环形光 <span class="num">¥2,261</span>、USB3 锁紧线 <span class="num">¥267</span>、三脚架 <span class="num">¥1,467</span>；标定板两家厂商价并列，Edmund 100×100mm <span class="num">¥12,306</span>、Optelyra 同规格 <span class="num">¥15,788</span>，mini PC 表按 Optelyra 计，其余路线按 Edmund 计。Basler ace2 功耗两份资料分别为 3.3W 与 3.6W，并列未调和。2D 与 3D 差额均为第二套成像链 <span class="num">¥12,166</span>（mini PC 路线光源不同，差额 <span class="num">¥14,974</span>）。</p>
+<h3>9.2 树莓派 Pi 5／CM5</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>Pi 5 8GB <span class="num">¥1,167</span>；CM5 8GB／32GB <span class="num">¥1,334</span>＋官方 IO 板 <span class="num">¥133</span>；CM4 上一代，不推荐新做 <span class="ev ev-a">A</span></td><td>同 2D；双路须 RP1 双独立 xHCI 控制器各占一口 <span class="ev ev-a">A</span></td></tr>
+<tr><td>设备</td><td>单台 Basler a2A2448-75umPRO 单色 5MP <span class="num">¥7,537</span>；Kowa 镜头；环形光；Edmund 标定板 <span class="num">¥12,306</span>（最大单项，占 2D 合计约 48%）</td><td>第二台单色相机＋镜头＋光源；标定板共用一块</td></tr>
+<tr><td>性能</td><td>单路 5MP 75fps 需 <span class="num">376 MB/s</span>，贴着 USB3 实际约 <span class="num">380 MB/s</span> 上限，余量约 1%；离线全场相关约 2 帧／秒（公开实测 <span class="ev ev-b">B</span>）</td><td>双路 75fps 需 <span class="num">752 MB/s</span>，USB 理论刚好够但无余量；官方 NVMe Gen2 写约 <span class="num">450 MB/s</span> 写不下，双路连续采集在官方硬件上无解，只能降帧至 45fps 以下或间歇采集</td></tr>
+<tr><td>功能</td><td>开源链完整：pylon ARM64 SDK 采图＋pyALDIC／py2DIC／RealPi2dDIC 分析；RealPi2dDIC 为专为 Pi 写的 2D DIC，已发表 <span class="ev ev-a">A</span></td><td>开源 3D 只有 pyALDIC-3D 一条路，无商业软件可对照验证精度</td></tr>
+<tr><td>预期</td><td>最低成本 2D 入门：全套 <span class="num">¥25,804</span>，核心采集 <span class="num">¥11,237</span>；CSI 路线全套 <span class="num">¥18,221</span>；CM5 路线 <span class="num">¥25,591</span></td><td>双路全套 <span class="num">¥37,536</span>（共用光源 <span class="num">¥35,275</span>）；CSI 双 HQ <span class="num">¥20,489</span>；实际以 30–45fps 间歇采集为主</td></tr>
+<tr><td>解决问题</td><td>预算有限时 2D 从无到有；野外无工控机环境下的采集；多机位并行成本低</td><td>同 2D；双路硬件前提 RP1 双控制器已核实</td></tr>
+<tr><td>边界</td><td colspan="2">不能实时全场相关；不能高速；不能做认证／计量场景；不能跑商用 DIC 软件与 MATLAB／Ncorr（MathWorks 官方：Linux 只支持 x86-64 <span class="ev ev-a">A</span>）；pypylon 在 ARM64 上有已知启动问题，软件链每一步都要实装验证</td></tr>
+</table>
+<h3>9.3 mini PC x86</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>入门 N100 约 <span class="num">¥2,194</span>；中档 N305 约 <span class="num">¥1,194–2,328</span>；主力 LattePanda Sigma i5-1340P 约 <span class="num">¥4,729–6,190</span>、Beelink SEi14 125H 约 <span class="num">¥3,328</span>；高性能 SER8 8845HS 约 <span class="num">¥7,064</span></td><td>须 Gen2／雷电口机型（Sigma、SER8、SEi14）；N100／N305 不建议双路</td></tr>
+<tr><td>设备</td><td>Basler ace2 <span class="num">¥7,704</span>；Kowa 镜头 <span class="num">¥1,934</span>；Spectrum 环形灯 <span class="num">¥5,336</span>；Optelyra 标定板 <span class="num">¥15,788</span>（最大单项，占 2D 约 44%）</td><td>第二套成像链 <span class="num">¥14,974</span>；12 位双路约 <span class="num">1,128 MB/s</span>，需 Gen2 双口或雷电扩展</td></tr>
+<tr><td>性能</td><td>单路 8 位 <span class="num">376 MB/s</span>，单口 USB3 勉强够；12 位 <span class="num">564 MB/s</span> 需 Gen2；Geekbench 6 多核约 2,000–13,000（档位不同）</td><td>双路 8 位 <span class="num">752 MB/s</span>，须双独立控制器或 Gen2；24MP 100fps 约 <span class="num">2,363 MB/s</span> 超出全部 USB 方案</td></tr>
+<tr><td>功能</td><td>VIC-2D 最低要求（i7 四核／16GB／4TB＋500GB SSD）主力档与高性能档字面满足；ZEISS CORRELATE 最低要求（i3／4GB）全部档位满足 <span class="ev ev-a">A</span></td><td>VIC-3D 无最低配置原文，无法判定；Istra4D／DaVis 要求未公开，无法判定 <span class="ev ev-d">D</span></td></tr>
+<tr><td>预期</td><td>全套 <span class="num">¥31,956–37,826</span>（随主机档位）；Windows 即装即用商用软件，现场采集＋处理一体化</td><td>Sigma 16GB＋500GB 全套 <span class="num">¥51,059</span>；接口带宽账面上够，实际采集稳定性未实测 <span class="ev ev-d">D</span></td></tr>
+<tr><td>解决问题</td><td>商用 DIC 软件只能跑在台式机／笔记本上的问题；Jetson／树莓派跑不了 Windows 商用软件的问题；单路 USB3 带宽贴上限的问题</td><td>同 2D；Gen2／TB4 机型提供 10–40 Gbps 接口余量</td></tr>
+<tr><td>边界</td><td colspan="2">无 PCIe 插槽，CoaXPress／Camera Link 采集卡不能直装，只能走雷电扩展坞（Sonnet 约 <span class="num">¥2,668</span>／RIITOP 约 <span class="num">¥1,327</span>／TH3P4 约 <span class="num">¥699</span>，兼容性未验证 <span class="ev ev-d">D</span>）；无独显，ZEISS 推荐配置“认证显卡”一条无机型满足；VIC-3D 实时性能未核实；商用软件授权价全部询价制</td></tr>
+</table>
+<h3>9.4 Jetson 全系</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>Orin Nano Super 套件 <span class="num">¥2,661</span>（67 TOPS／8GB／7–25W，2026-07 涨价后官方价，上市价折合 <span class="num">¥1,661</span>）；NX 8GB 模块 <span class="num">¥4,329</span>、NX 16GB 模块 <span class="num">¥6,663</span>；AGX Orin 32GB 模块 <span class="num">¥11,999</span>、64GB 模块 <span class="num">¥20,003</span>、64GB 套件 <span class="num">¥23,338</span> <span class="ev ev-a">A</span></td><td>双相机路线优先 NX 16GB（16GB 内存）；AGX 64GB 套件为算力与内存上限</td></tr>
+<tr><td>设备</td><td>Basler pylon ARM64 已核实可用（pylon 26.10 官方文档点名推荐 Jetson <span class="ev ev-a">A</span>）；CoaXPress 仅 x86_64，不支持 ARM</td><td>双路各接一个 Gen2 口理论可行；4 个口是否共用内部集线器未核实 <span class="ev ev-d">D</span>，共用则双路合计卡在约 <span class="num">380 MB/s</span></td></tr>
+<tr><td>性能</td><td>单路 5MP 75fps 约 <span class="num">376 MB/s</span>；TOPS 是稀疏 INT8 AI 算力，不能换算 DIC 帧率 <span class="ev ev-a">A</span></td><td>双路约 <span class="num">752 MB/s</span>，1 小时约 <span class="num">2.7 TB</span>；8GB 机型跑双路采集加相关余量紧张（推断）；Jetson 上无任何 DIC 吞吐实测基准 <span class="ev ev-d">D</span></td></tr>
+<tr><td>功能</td><td>pyALDIC／DICe／μDIC 原理上能跑（纯 Python 或源码构建），无 Jetson 实测报告；VIC-3D／VIC-2D 不能跑（Windows only，三处官方来源一致 <span class="ev ev-a">A</span>）</td><td>pyALDIC-3D 原理上能跑，无实测；MIPI 立体同步细节未核实 <span class="ev ev-d">D</span></td></tr>
+<tr><td>预期</td><td>Nano Super 全套 <span class="num">¥28,600</span>；5.6MP 变体 <span class="num">¥26,766</span>；AGX 64GB 套件全套 <span class="num">¥49,277</span>；NX 16GB 全套 <span class="num">¥32,602</span>＋载板等未核实，未闭合</td><td>Nano Super 全套 <span class="num">¥40,766</span>；5.6MP 变体 <span class="num">¥37,098</span>；AGX 64GB 套件 <span class="num">¥61,443</span></td></tr>
+<tr><td>解决问题</td><td>便携：套件 100×79×21mm、0.176kg，7–25W；低成本起步；单／双相机中速采集＋板载 AI 预处理＋轻量 2D DIC＋离线全场是甜点</td><td>同 2D；Nano Super 参考载板可换装 NX 模块，67 TOPS 升级到 157 TOPS 不用换载板</td></tr>
+<tr><td>边界</td><td colspan="2">全场高精度 3D-DIC 实时做不了；高速 DIC 做不了；商用 VIC 软件装不了；8GB 机型双路余量紧张；认证场景须另行做</td></tr>
+</table>
+<h3>9.5 FPGA Kria</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>K26 才是视觉路线：KV260 套件 <span class="num">¥1,661</span>、KR260 套件 <span class="num">¥2,328</span>，共用 K26 SOM（256K 逻辑单元、1248 DSP Slice、4GB DDR4）；KD240 用 K24 SOM，无相机接口，不适合 DIC <span class="ev ev-a">A</span></td><td>同 2D；KR260 的 SLVS-EC 只有 1 路，双目须另配 USB3 或 GigE 相机混接 <span class="ev ev-d">D</span></td></tr>
+<tr><td>设备</td><td>USB3 Vision 相机经 4 个 USB3 口接；Basler pylon ARM64 理论可跑，在 Kria 上实测与否未核实 <span class="ev ev-d">D</span>；MIPI／SLVS-EC 直连走专用链路</td><td>双路合计约 <span class="num">752 MB/s</span>，须确认 4 个 USB 口是否共享同一控制器 <span class="ev ev-d">D</span></td></tr>
+<tr><td>性能</td><td>DPU B4096 白皮书 300MHz 峰值 1.2 TOPS，第三方汇总标 1.4 TOPS，并列未调和；约为 Jetson Nano Super 的 1/50</td><td>K26 SOM 典型 7.5W、最大 15W；四路相机流并行、亚 20ms 延迟已有部署案例 <span class="ev ev-b">B</span></td></tr>
+<tr><td>功能</td><td>去噪、去畸变、ROI、压缩、散斑质量评估可进可编程逻辑线速跑；触发与同步控制由可编程逻辑直接驱动，延迟确定</td><td>全场相关匹配无现成 FPGA 实现，仍须放 ARM 核或 CPU／GPU 上算；KTH 2023 硕士论文证实 FPGA 加速 DIC 存在（螺栓夹紧力实时测量），只到学位论文一级，无商用产品 <span class="ev ev-a">A</span></td></tr>
+<tr><td>预期</td><td>KV260 全套 <span class="num">¥27,600</span>；KR260 全套 <span class="num">¥28,267</span></td><td>KV260 全套 <span class="num">¥39,766</span>；KR260 全套 <span class="num">¥40,433</span></td></tr>
+<tr><td>解决问题</td><td>采集侧确定性：硬件触发、线速率预处理、固定延迟；低功耗多路并行预处理</td><td>同 2D；可编程逻辑直接驱动触发，解决软件触发的逐台下发时差</td></tr>
+<tr><td>边界</td><td colspan="2">全场相关须自研 RTL／HLS，开发门槛四条便捷路线中最高；AI 算力弱，大模型推理不适合；商用 DIC 软件跑不了；套件载板无 PCIe 插槽，CXP／CL 采集卡接不进去（Coaxlink Quad CXP-12 约 <span class="num">¥16,668–17,742</span>，须另配 x86 主机或定制载板，不计入合计）</td></tr>
+</table>
+<h3>9.6 国产 ARM</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>RK3588：4×A76 2.4GHz＋4×A55，NPU 6 TOPS，48MP ISP；代表板卡 ROCK 5B 16GB 约 <span class="num">¥867</span>（2026 年渠道价）、Orange Pi 5 Plus 约 <span class="num">¥767–900</span>；RK3576：4×A72 2.2GHz，NPU 6 TOPS，16MP ISP，ROCK 4D 约 <span class="num">¥327–847</span>；QCS8550：Kryo 1×3.2＋4×2.8＋3×2.0GHz，48 INT8／12 FP16 TOPS，8 路 MIPI，最多 5 路并发，Open-Q 8550CS SOM 约 <span class="num">¥7,574</span>（不含载板） <span class="ev ev-a">A</span></td><td>三颗芯片双路接口都齐全：RK3588 双 USB3／2.5GbE／双 MIPI，RK3576 三路 MIPI，QCS8550 5 路并发 MIPI</td></tr>
+<tr><td>设备</td><td>Basler pylon 26.10 完整支持 Linux ARM（Workbench／Viewer／GigE 配置器均可用，仅 USB Configurator 不支持）；海康 MVS V5.1.1 有 Linux aarch64 版；大恒 Galaxy 有 Linux ARM 版 SDK <span class="ev ev-a">A</span></td><td>双目同步须硬件触发线或 PTP；板卡级 PTP 硬件时间戳未核实 <span class="ev ev-d">D</span></td></tr>
+<tr><td>性能</td><td>NPU 的 TOPS 数不能当 DIC 算力用；全场 DIC 实时在 ARM 上无公开实证 <span class="ev ev-d">D</span></td><td>立体标定与双路相关计算在 ARM CPU 上的吞吐未核实 <span class="ev ev-d">D</span></td></tr>
+<tr><td>功能</td><td>采集端是真优势：多路 MIPI 直连、双 USB3、2.5GbE、NVMe 落盘；DICe、pyALDIC、Ncorr 在 ARM64 上均无公开编译运行记录 <span class="ev ev-d">D</span>；商用 DIC 软件明确跑不了（VIC-3D 要求 Windows 10，整机随 Windows 发货 <span class="ev ev-a">A</span>）</td><td>同 2D；MIPI 直连工业相机须自行调 ISP，无成熟案例</td></tr>
+<tr><td>预期</td><td>RK3588 全套 <span class="num">¥26,806</span>，比 Jetson Nano Super 套件路线便宜 <span class="num">¥1,794</span>（现价口径）；RK3576 全套 <span class="num">¥26,473–26,786</span></td><td>RK3588 全套 <span class="num">¥38,972</span>；RK3576 全套 <span class="num">¥38,639–38,952</span>；QCS8550 模组约 <span class="num">¥7,574</span>，约为 Jetson 套件 2.85 倍，载板价未核实，合计无法闭合</td></tr>
+<tr><td>解决问题</td><td>最低成本的多路 MIPI 采集盒；便携现场采集；AI 辅助质检（NPU 跑散斑质量评估、缺陷分类）；国产化替代</td><td>同 2D</td></tr>
+<tr><td>边界</td><td colspan="2">跑不了商用 DIC 软件；没有公开实证的全场 DIC 实时计算；高速 DIC 不在路线内；ROCK 4D 有卖家提示当前版本无法通过 eMMC 启动，采购前须确认批次；认证场景须另行验证</td></tr>
+</table>
+<h3>9.7 采集卡＋工控机</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>Euresys Coaxlink Quad CXP-12：4×CXP-12，每路 12.5 Gbps，聚合 <span class="num">5000 MB/s</span>，PCIe 3.0 x8 持续 <span class="num">6700 MB/s</span>，板载 4GB，20 路数字 I／O；低配 Duo CXP-12 LP 2 路；ADLINK PCIe-CPL64V Full：Camera Link Full 最高 <span class="num">850 MB/s</span>，512MB DDR，编码器输入，多卡同步最多 4 卡、卡间延迟小于 100ns <span class="ev ev-b">B</span></td><td>Coaxlink Quad 一卡接两台 CXP-12 相机，余量充足；Camera Link Full 一卡只接一台，双路须两张卡加多卡同步</td></tr>
+<tr><td>设备</td><td>线长 CXP-12 速率下 40m、CXP-6 下 72m、CXP-3 下 100m；Camera Link 规范 10m，85MHz 下实际约 5–7m；PoCXP 每路 24VDC、最高 17W <span class="ev ev-b">B</span></td><td>采集卡数字 I／O 触发、编解码器同步、多卡同步；GigE 相机走 10GigE 网卡直连工控机，不需要采集卡</td></tr>
+<tr><td>性能</td><td>单路 5MP 75fps 约 <span class="num">376 MB/s</span>，一路 CXP-12 或一路 Camera Link Full 绰绰有余；一路 GigE 约 <span class="num">110 MB/s</span> 不够</td><td>双路合计约 <span class="num">752 MB/s</span>；线扫不断行、编码器同步、单路数据率大于 1GB／s 三项占其二时，树莓派／Mini PC 物理上不够，必须走这条路</td></tr>
+<tr><td>功能</td><td>采集卡只解决取流、同步与带宽，不做 DIC 计算；DIC 全场相关仍在工控机上跑（商用软件或开源软件），与商用 DIC 软件直接配套，有公开实证</td><td>同 2D</td></tr>
+<tr><td>预期</td><td>已核价部分 <span class="num">¥90,173</span>（Quad CXP-12 约 <span class="num">¥23,040</span>＋工控机 <span class="num">¥32,216</span>＋标定装置 <span class="num">¥34,917</span>，不含相机、镜头、软件）；商用软件 <span class="num">¥321,994</span>，开源 0 元</td><td>商用软件路线整机量级约 <span class="num">¥44万</span>（报价单成交价约 41.7 万＋采集卡约 2.3 万，CXP 相机与报价单相机同价是假设，未核实，不作结论）</td></tr>
+<tr><td>解决问题</td><td>USB3／GigE 带宽不够、线缆不够长（CXP-12 可达 40m）、线扫须与运动轴同步、多相机须硬件同步</td><td>同 2D</td></tr>
+<tr><td>边界</td><td colspan="2">不是便携盒子形态；买卡不等于买 DIC 系统；CXP／Camera Link 相机比同规格 GigE／USB3 相机贵，价格未核实；ADLINK 三款采集卡标价、10GigE 网卡型号与价格未核实 <span class="ev ev-d">D</span></td></tr>
+</table>
+<h3>9.8 智能相机</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>康耐视 In-Sight 2800（720×540／1440×1080，最高 45fps）约 <span class="num">¥30,015–60,030</span>、3800（1.6–16MP，最高 125fps，图像处理 512MB SDRAM，整机 4GB）询价制；IDS NXT malibu 约 <span class="num">¥8,054</span>、rome 约 <span class="num">¥11,127–11,200</span>（已停产）；海康 SC6250C（25MP，16GB 内存）／SC5120XC（12MP）／SC5020XM（2MP 100fps）询价制；凌云光 ST3000（1.3／3／5MP，最高 60fps）询价制；LMI Gocator 3520（5MP 双目结构光，快照仅 3Hz，2.6kg）询价制 <span class="ev ev-b">B</span></td><td>LMI Gocator 做 3D 轮廓快照（形状、体积、平面度），其余四家无 3D 能力；Gocator 测的是形状不是应变，不能替代 DIC</td></tr>
+<tr><td>设备</td><td>板载工具：模板匹配、斑点、边缘、测量、读码、OCR、分类、分割、计数；无一家列出 DIC、散斑相关、应变场、立体标定中任何一项 <span class="ev ev-c">C</span></td><td>五家均无双相机立体同步；In-Sight 只有 1 路触发输入，IDS 只有 GigE＋REST／OPC UA</td></tr>
+<tr><td>性能</td><td>算力：三家未公开芯片型号与 TOPS 数；IDS 只说推理数毫秒。5MP 步长 10px 约 49,800 个测点、逐点迭代相关，板载工具只有单次判定</td><td>内存：100 帧 5MP 序列约 500MB，In-Sight 3800 图像处理 SDRAM 仅 512MB 且与视觉任务共用，IDS rio／rome 仅 128MB；海康内存够，但败在封闭软件＋单机无同步</td></tr>
+<tr><td>功能</td><td>能嵌的是判断逻辑（有无、定位、测量、读码、OK／NG、分类），直出 PLC</td><td>跑不了 DIC 全场：2D 全场位移与应变、3D 立体应变都不在能力范围内</td></tr>
+<tr><td>预期</td><td>单工位有无、定位、测量、读码、OK／NG；IP67 防护、24VDC 供电、浏览器配置、免工控机</td><td>产线 2D 检测工位可用智能相机替代工控机加工业相机；3D 轮廓检测可用 Gocator</td></tr>
+<tr><td>解决问题</td><td>产线节拍检测、装配检查、外观检测、读码追溯</td><td>在线 3D 轮廓与尺寸检测</td></tr>
+<tr><td>边界</td><td colspan="2">能嵌的是判断逻辑，不是 DIC；单相机单工位，不做多相机融合；卷帘快门型号（IDS NXT malibu／oslo、rio）不适合动态测量；封闭软件，不能装 VIC-3D／Istra4D／DICe；Gocator 3Hz 快照只适合静止件轮廓。结论依据为工具清单、内存、同步三项证据的缺失，不是一次实测</td></tr>
+</table>
+<h3>9.9 笔记本／移动工作站</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>主力档 ThinkPad P16 2026（Ultra7 255HX／32GB／1TB／RTX Pro 2000）<span class="num">¥22,999</span>；轻量档 P16v 补贴价 <span class="num">¥20,159</span>、Precision 5490（1.48kg、72Wh、4×雷电 4）；P16 Gen 2 已停产（PSREF 标记 Withdrawn，2026-08-10），继任者 P16 Gen 3 <span class="ev ev-b">B</span></td><td>同 2D；3D 双路高速＋全场实时不建议走轻量档</td></tr>
+<tr><td>设备</td><td>P16 Gen 2：2×雷电 4＋1×USB-C 10Gbps＋2×USB-A 5Gbps，无 RJ45；Precision 5690：2×雷电 4，无 USB-A、无 RJ45；GigE 相机须 USB-C 转 2.5GbE 适配器 <span class="ev ev-a">A</span></td><td>双路各接一个独立口（USB-C 10Gbps＋雷电 4）；两口是否共享同一主机控制器未核实 <span class="ev ev-d">D</span>；USB-A 5Gbps 口单路 5MP 75fps 已贴近上限</td></tr>
+<tr><td>性能</td><td>主力档 CPU／GPU 全面超过 VIC-2D 桌面最低配置（i7 四核／16GB <span class="ev ev-a">A</span>）；单路 5MP 75fps 约 <span class="num">376 MB/s</span>，一个 USB-C 10Gbps 口可接</td><td>双路约 <span class="num">752 MB/s</span>；1TB 硬盘满速双路只够约 22 分钟、单路约 44 分钟；P16 Gen 2 重负载续航仅 2–3 小时且满载发热明显 <span class="ev ev-b">B</span></td></tr>
+<tr><td>功能</td><td>商用 DIC 软件直跑：VIC-3D 官网称“现场出结果、在任何 Windows PC 上处理”；Q-480 出厂即配笔记本装 Pelicase；ZEISS CORRELATE 最低 i3／4GB，推荐 i9 16 核／64GB＋认证显卡 <span class="ev ev-a">A</span></td><td>VIC-3D 软件包内含 VIC-2D，不另收费；Istra4D 与 DaVis 官方系统要求均未公开，须向厂商确认 <span class="ev ev-d">D</span></td></tr>
+<tr><td>预期</td><td>全套 <span class="num">¥47,471</span>；轻量档全套约 <span class="num">¥44,600</span>；商用软件另计（VIC-3D 软件约 <span class="num">¥321,994</span>）</td><td>全套 <span class="num">¥59,637</span>；轻量档全套约 <span class="num">¥56,800</span>；全场实时最高 10Hz（厂商口径 <span class="ev ev-c">C</span>）</td></tr>
+<tr><td>解决问题</td><td>实验室与现场之间移动；商用软件零开发；教学与演示（单相机 2D＋笔记本是最轻的完整 DIC 演示形态）</td><td>大结构巡检的计算端；Q-480 手持系统的标准计算端</td></tr>
+<tr><td>边界</td><td colspan="2">高速连续采集散热与续航弱于台式工作站；无市电的野外长试验不可行；不是嵌入式盒子形态；无原生 RJ45、无采集卡槽，CXP-12／10GigE 相机须雷电转接（未核实 <span class="ev ev-d">D</span>）；笔记本实测 DIC 帧率无任何公开实测 <span class="ev ev-d">D</span></td></tr>
+</table>
+<h3>9.10 商用便携整机</h3>
+<table>
+<tr><th>维度</th><th>2D</th><th>3D</th></tr>
+<tr><td>选型</td><td>档 A 五款本体均为 3D 立体系统，2D 能力须另配独立 2D 产品，不可默认双相机系统拆一台相机就能做 2D。独立 2D 产品：LaVision 2D StrainMaster 系统（单相机 2–50MP，含同步单元、LED 光源、DaVis 软件，询价）；VIC-2D（见下）；ZEISS ARAMIS 2D（Adjustable 12M 单相机配置，见下）</td><td>档 A：LaVision StrainMaster Compact、ZEISS ARAMIS 1、VIC-3D Blue Hawk、Dantec FlexDIC、Dantec Q-480；档 B：LaVision StrainMaster Portable、ZEISS ARAMIS Adjustable／3D Camera、XTOP XTDIC、PMLAB DIC-3D</td></tr>
+<tr><td>设备</td><td>VIC-2D：LS／QX／HS／UHS 四档，相机 2.3–45MP，帧率 400Hz–16Hz 至 5MHz，面内分辨率 1／200,000×视场，应变分辨率 10µε，量程 0.005%–2000%（厂商页另写局部应变自 50µε 至 2500% 以上，并列）；VIC-Gauge 2D 实时 200Hz（7 代）／500Hz（8 代），按版本区分；桌面最低 i7 四核／16GB／4TB＋500GB SSD <span class="ev ev-a">A</span>。ARAMIS 2D：单相机 12MP 4096×3000，最高 25fps，测量面积约 20×15mm 至 5000×4000mm，系统起价约 <span class="num">¥86,100</span> 不含税（含镜头、标定物、三脚架、CORRELATE Essential Line；电脑、Controller、送货与培训另计）<span class="ev ev-b">B</span></td><td>VIC-3D 软件含 VIC-2D 7 授权，不另收费（报价单原文 <span class="ev ev-b">B</span>）；Blue Hawk：视场 40–400mm，2.4–24.6MP，4 档可调基线，标定一次复用；Compact 测量头 195×200×60mm，10–30°C，被动散热</td></tr>
+<tr><td>性能</td><td>VIC-2D 全场应变 10Hz；VIC-3D 全场 10Hz @ 5,000 子区；VIC-3D 100 万点／秒为 2026 版规格书原文（64+ 核处理器条件），2022 版规格书正文无此数，50 万点／秒见经销商资料；VIC-Gauge 3D 实时频率同一份 2026 版规格书内两处并列——实时章节 250Hz，附加模块章节 280Hz（依赖相机帧率），按章节区分，不调和</td><td>FlexDIC：2／3 相机 USB3 或 GigE，5MP USB3 77Hz／GigE 24Hz，12MP 30／9Hz，24MP 15／5Hz；Q-480 现售状态未核实 <span class="ev ev-d">D</span>（2011 年推出，Dantec 当前产品线 EduDIC／FlexDIC／TestDIC／MulticamDIC 未见 Q-480，须向厂商确认）</td></tr>
+<tr><td>功能</td><td>开箱即用：出厂标定、控制器、笔记本、软件成套；ARAMIS 2D 可升级为 Adjustable 12M 立体系统（加第二台相机与标定）</td><td>档 A 差一次对准＋验证（推测 0.5–2h）；档 B 差组装＋标定（首次半天–1 天，重复 0.5–2h）</td></tr>
+<tr><td>预期</td><td>ARAMIS 2D 系统起价约 <span class="num">¥86,100</span>（不含税）；VIC-2D 单独售价未找到公开标价 <span class="ev ev-d">D</span></td><td>VIC-3D 整套：俄亥俄州政府采购报价单 2025-10，11 项分项合计 <span class="num">¥503,418</span>，折扣 <span class="num">−¥86,877</span>，成交 <span class="num">¥416,542</span>，见 5.7 节；二手 GOM Aramis Adjustable 6M 约 <span class="num">¥173,400</span>；2018 年新机报价约 <span class="num">¥646,000</span>、大学价约 <span class="num">¥512,100</span></td></tr>
+<tr><td>解决问题</td><td>2D 平面试样面内位移与应变；准静态拉伸、平面剪切、虚拟引伸计、局部应变研究</td><td>3D 全场形状、离面位移与应变；高温、高速、大视场极端工况</td></tr>
+<tr><td>边界</td><td colspan="2">整机价全部询价制；重量与功耗多数未在公开资料中写明，须向厂商确认；PMLAB 相机分辨率、帧率、视场、应变范围数值未找到 <span class="ev ev-d">D</span>；Q-480 全部数值参数与现售状态未核实 <span class="ev ev-d">D</span></td></tr>
+</table>
+<h3>9.11 未核实清单与选型建议</h3>
+<p><b>未核实清单（汇总，各路线单列清单见调研笔记）：</b>双路 USB 口是否共享同一控制器（树莓派已核实双独立控制器，其余路线均未核实）；Jetson／ARM／FPGA 上 DIC 吞吐实测（全场每秒点数、帧率）；VIC-3D／Istra4D／DaVis 在 mini PC 以外机型上的最低配置；商用 DIC 软件授权价（全部询价制）；雷电扩展坞＋采集卡兼容性；笔记本实测 DIC 帧率；Q-480 现售状态与替代型号；各商用系统重量与功耗。</p>
+<table>
+<tr><th>场景</th><th>推荐</th><th>为什么</th><th>不选什么</th></tr>
+<tr><td>要最低成本 2D 入门、接受离线处理</td><td>树莓派 Pi 5 全套 <span class="num">¥25,804</span></td><td>成本最低；开源链完整；已有发表的 Pi 2D DIC 系统</td><td>商用软件路线（跑不了）；高速动态（带宽贴上限）</td></tr>
+<tr><td>要跑商用 DIC 软件、便携进现场</td><td>mini PC x86（主力档）或笔记本（现场即采即算）</td><td>只有 x86＋Windows 能直装 VIC-2D／CORRELATE；笔记本自带屏幕与电池</td><td>Jetson／树莓派／ARM／FPGA（Windows only 堵死）</td></tr>
+<tr><td>要自研便携盒、预算有限、接受 1–3 月开发</td><td>Jetson Orin Nano Super 全套 2D <span class="num">¥28,600</span>／3D <span class="num">¥40,766</span></td><td>套件价 <span class="num">¥2,661</span> 起步；开源软件 0 元；单／双相机中速＋AI 预处理是甜点</td><td>AGX（性能过剩）；QCS8550（模组价高、无原生网口）</td></tr>
+<tr><td>要最低成本多路 MIPI 采集盒</td><td>RK3588＋ROCK 5B 全套 2D <span class="num">¥26,806</span>／3D <span class="num">¥38,972</span></td><td>板卡约 <span class="num">¥867</span>；双 MIPI＋双 USB3＋2.5GbE＋NVMe 齐全</td><td>QCS8550（模组价约为 Jetson 套件 2.85 倍）；商用软件路线</td></tr>
+<tr><td>要硬实时预处理与确定性同步</td><td>FPGA KV260 全套 2D <span class="num">¥27,600</span>／3D <span class="num">¥39,766</span></td><td>线速率预处理、固定延迟、可编程逻辑直驱触发</td><td>全场相关实时（无现成实现）；KD240（无相机接口）</td></tr>
+<tr><td>要高速大面阵、线扫、编码器同步</td><td>采集卡＋工控机</td><td>三项占其二时只有这条路物理上够</td><td>树莓派／Mini PC（带宽与确定性不够）</td></tr>
+<tr><td>要开箱即用、不要开发</td><td>商用便携整机（按 2D／3D 与预算询价）</td><td>出厂标定、控制器、软件成套；高温、高速只有商用套装有完整产品形态</td><td>自研路线（1–4 月开发，精度须对标验证）</td></tr>
+</table>
+<p>来源：本章数字来自 2026-11-27 八路调研笔记（树莓派、mini PC、Jetson、FPGA、国产 ARM、采集卡＋智能相机、笔记本、商业 2D 核实），关键数字已逐项复算；VIC-3D 2026 版规格书与俄亥俄州报价单原文已直接打开核对。</p>
 </section>
 
 </main>
